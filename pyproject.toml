@@ -1,0 +1,30 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "emb-jev"
+version = "0.1.0"
+description = "Training-free multimodal decisions with EmbeddingGemma 2"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["numpy>=1.26,<3"]
+
+[project.optional-dependencies]
+model = ["sentence-transformers[image,audio]>=6.1,<7", "transformers>=5.19,<6"]
+dev = ["pytest>=8,<10", "ruff>=0.14", "build>=1.2"]
+experiment = ["httpx>=0.28,<1", "scikit-learn>=1.6,<2", "matplotlib>=3.9,<4"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/emb_jev"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]

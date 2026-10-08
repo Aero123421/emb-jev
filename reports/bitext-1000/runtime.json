@@ -1,0 +1,29 @@
+{
+  "backend": {
+    "device": "cuda",
+    "dimension": 768,
+    "dtype": "torch.bfloat16",
+    "max_tokens": 2048,
+    "modalities": [
+      "text"
+    ],
+    "model": "google/embeddinggemma-2",
+    "preprocessing": 1,
+    "revision": "914f7f89142e33e77833254d9c9b90c3cef7303b",
+    "sentence-transformers": "6.1.0",
+    "transformers": "5.19.0"
+  },
+  "embedding_seconds": 1.6740860849968158,
+  "forward_calls": 81,
+  "python": "3.11.16",
+  "packages": {
+    "torch": "2.14.1",
+    "sentence-transformers": "6.1.0",
+    "transformers": "5.19.0",
+    "numpy": "1.26.4",
+    "scikit-learn": "1.9.1",
+    "httpx": "0.28.1"
+  },
+  "weights_updated": false,
+  "input": "instruction only, never response/category/intent"
+}

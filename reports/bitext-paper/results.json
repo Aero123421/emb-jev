@@ -1,0 +1,5416 @@
+{
+  "evaluated_at_utc": "2026-10-08T10:14:35.023649+00:00",
+  "frozen_sha256": "42d384e5879c22c48df0484d6876cdf52f6b36600b61c32b6f23787f29a92688",
+  "test_size": 10000,
+  "baselines": {
+    "uniform_random": {
+      "teacher_agreement": 0.0394,
+      "teacher_agreement_95ci": [
+        0.03576049506533981,
+        0.043393244233727445
+      ],
+      "teacher_macro_f1": 0.0389810725744017,
+      "teacher_kappa": 0.00252117290550935,
+      "teacher_category_agreement": 0.1245,
+      "dataset_agreement": 0.0387,
+      "dataset_agreement_95ci": [
+        0.03509335668205077,
+        0.04266092021473544
+      ],
+      "dataset_macro_f1": 0.038366149803140064,
+      "dataset_kappa": 0.001814096187573555,
+      "dataset_category_agreement": 0.1228
+    },
+    "description_zero_shot": {
+      "teacher_agreement": 0.7823,
+      "teacher_agreement_95ci": [
+        0.7741039987097492,
+        0.7902791958101668
+      ],
+      "teacher_macro_f1": 0.776997455894683,
+      "teacher_kappa": 0.7734919136873302,
+      "teacher_category_agreement": 0.8771,
+      "dataset_agreement": 0.8097,
+      "dataset_agreement_95ci": [
+        0.8018880346042135,
+        0.8172741168049892
+      ],
+      "dataset_macro_f1": 0.8021618357403403,
+      "dataset_kappa": 0.8019814961437379,
+      "dataset_category_agreement": 0.894
+    },
+    "jev_direct": {
+      "teacher_agreement": 1.0,
+      "teacher_agreement_95ci": [
+        0.9996160016293234,
+        1.0
+      ],
+      "teacher_macro_f1": 1.0,
+      "teacher_kappa": 1.0,
+      "teacher_category_agreement": 1.0,
+      "dataset_agreement": 0.912,
+      "dataset_agreement_95ci": [
+        0.9062881269633114,
+        0.9173954583792512
+      ],
+      "dataset_macro_f1": 0.9075167021821784,
+      "dataset_kappa": 0.9084141530731501,
+      "dataset_category_agreement": 0.9543
+    }
+  },
+  "runs": [
+    {
+      "source": "jev",
+      "support_size": 500,
+      "subset_seed": 0,
+      "method": "nearest",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8661,
+      "teacher_agreement_95ci": [
+        0.8592846629463341,
+        0.8726341734466564
+      ],
+      "teacher_macro_f1": 0.8614653562835708,
+      "teacher_kappa": 0.8605594365818121,
+      "teacher_category_agreement": 0.9481,
+      "dataset_agreement": 0.8464,
+      "dataset_agreement_95ci": [
+        0.8392001459726277,
+        0.8533338199561675
+      ],
+      "dataset_macro_f1": 0.8403080677174073,
+      "dataset_kappa": 0.8401555087094643,
+      "dataset_category_agreement": 0.9344
+    },
+    {
+      "source": "jev",
+      "support_size": 500,
+      "subset_seed": 0,
+      "method": "centroid",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8914,
+      "teacher_agreement_95ci": [
+        0.8851508547195078,
+        0.8973485513559264
+      ],
+      "teacher_macro_f1": 0.8886493246129286,
+      "teacher_kappa": 0.8869289607978126,
+      "teacher_category_agreement": 0.9573,
+      "dataset_agreement": 0.9007,
+      "dataset_agreement_95ci": [
+        0.8946836834291466,
+        0.906408580276593
+      ],
+      "dataset_macro_f1": 0.8955963124832498,
+      "dataset_kappa": 0.8966490026316515,
+      "dataset_category_agreement": 0.9649
+    },
+    {
+      "source": "jev",
+      "support_size": 500,
+      "subset_seed": 0,
+      "method": "weighted_knn",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8867,
+      "teacher_agreement_95ci": [
+        0.8803386404986546,
+        0.8927643751614642
+      ],
+      "teacher_macro_f1": 0.8824847991345136,
+      "teacher_kappa": 0.8819780528345403,
+      "teacher_category_agreement": 0.9625,
+      "dataset_agreement": 0.867,
+      "dataset_agreement_95ci": [
+        0.8602033159427245,
+        0.8735148292531989
+      ],
+      "dataset_macro_f1": 0.8601230214562612,
+      "dataset_kappa": 0.8615765541656304,
+      "dataset_category_agreement": 0.9486
+    },
+    {
+      "source": "jev",
+      "support_size": 500,
+      "subset_seed": 0,
+      "method": "soft_knn",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8889,
+      "teacher_agreement_95ci": [
+        0.8825907321912747,
+        0.8949105938760131
+      ],
+      "teacher_macro_f1": 0.8852740985356115,
+      "teacher_kappa": 0.8843028115541481,
+      "teacher_category_agreement": 0.9622,
+      "dataset_agreement": 0.8768,
+      "dataset_agreement_95ci": [
+        0.870213173494584,
+        0.8830974453332742
+      ],
+      "dataset_macro_f1": 0.869437317095782,
+      "dataset_kappa": 0.8717885263302451,
+      "dataset_category_agreement": 0.9538
+    },
+    {
+      "source": "jev",
+      "support_size": 500,
+      "subset_seed": 0,
+      "method": "filtered_centroid",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8907,
+      "teacher_agreement_95ci": [
+        0.8844339193785391,
+        0.8966660242946143
+      ],
+      "teacher_macro_f1": 0.8869026736705727,
+      "teacher_kappa": 0.8861982544478132,
+      "teacher_category_agreement": 0.9535,
+      "dataset_agreement": 0.9075,
+      "dataset_agreement_95ci": [
+        0.9016638420629107,
+        0.9130231992649877
+      ],
+      "dataset_macro_f1": 0.9031660682539449,
+      "dataset_kappa": 0.9037216425108605,
+      "dataset_category_agreement": 0.9709
+    },
+    {
+      "source": "jev",
+      "support_size": 500,
+      "subset_seed": 0,
+      "method": "hybrid",
+      "selected_on_validation": true,
+      "teacher_agreement": 0.8962,
+      "teacher_agreement_95ci": [
+        0.8900691634911578,
+        0.902026556199918
+      ],
+      "teacher_macro_f1": 0.8929631806568658,
+      "teacher_kappa": 0.8919142362581317,
+      "teacher_category_agreement": 0.9618,
+      "dataset_agreement": 0.8989,
+      "dataset_agreement_95ci": [
+        0.8928374431783186,
+        0.9046562029215557
+      ],
+      "dataset_macro_f1": 0.8933054727682551,
+      "dataset_kappa": 0.8947786009065464,
+      "dataset_category_agreement": 0.965
+    },
+    {
+      "source": "jev",
+      "support_size": 500,
+      "subset_seed": 0,
+      "method": "majority",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.0305,
+      "teacher_agreement_95ci": [
+        0.027305788856246564,
+        0.03405478561381876
+      ],
+      "teacher_macro_f1": 0.0021923913238808923,
+      "teacher_kappa": 0.0,
+      "teacher_category_agreement": 0.0751,
+      "dataset_agreement": 0.0327,
+      "dataset_agreement_95ci": [
+        0.029389694497558846,
+        0.03636919037967548
+      ],
+      "dataset_macro_f1": 0.0023455236004863195,
+      "dataset_kappa": 0.0,
+      "dataset_category_agreement": 0.0745
+    },
+    {
+      "source": "jev",
+      "support_size": 500,
+      "subset_seed": 0,
+      "method": "prior_random",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.0374,
+      "teacher_agreement_95ci": [
+        0.033855276482213766,
+        0.04129999881033621
+      ],
+      "teacher_macro_f1": 0.03517823145098374,
+      "teacher_kappa": -0.0011751795505654528,
+      "teacher_category_agreement": 0.1215,
+      "dataset_agreement": 0.037,
+      "dataset_agreement_95ci": [
+        0.03347456890925213,
+        0.04088101358199439
+      ],
+      "dataset_macro_f1": 0.03500874554524074,
+      "dataset_kappa": -0.0010996918983154913,
+      "dataset_category_agreement": 0.1199
+    },
+    {
+      "source": "dataset",
+      "support_size": 500,
+      "subset_seed": 0,
+      "method": "nearest",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8473,
+      "teacher_agreement_95ci": [
+        0.840116776698737,
+        0.8542164980329912
+      ],
+      "teacher_macro_f1": 0.8391795917340326,
+      "teacher_kappa": 0.8410928912889308,
+      "teacher_category_agreement": 0.9357,
+      "dataset_agreement": 0.9153,
+      "dataset_agreement_95ci": [
+        0.9096820224539589,
+        0.9205990284993572
+      ],
+      "dataset_macro_f1": 0.9104220222355649,
+      "dataset_kappa": 0.9118504911062038,
+      "dataset_category_agreement": 0.978
+    },
+    {
+      "source": "dataset",
+      "support_size": 500,
+      "subset_seed": 0,
+      "method": "centroid",
+      "selected_on_validation": true,
+      "teacher_agreement": 0.8794,
+      "teacher_agreement_95ci": [
+        0.8728710189019847,
+        0.8856376031343457
+      ],
+      "teacher_macro_f1": 0.8745142585462118,
+      "teacher_kappa": 0.874509178446554,
+      "teacher_category_agreement": 0.9441,
+      "dataset_agreement": 0.9471,
+      "dataset_agreement_95ci": [
+        0.9425387352030741,
+        0.9513178934538669
+      ],
+      "dataset_macro_f1": 0.9450095610944526,
+      "dataset_kappa": 0.944940821843685,
+      "dataset_category_agreement": 0.9877
+    },
+    {
+      "source": "dataset",
+      "support_size": 500,
+      "subset_seed": 0,
+      "method": "weighted_knn",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8587,
+      "teacher_agreement_95ci": [
+        0.851735023907881,
+        0.8653894956609957
+      ],
+      "teacher_macro_f1": 0.851922257842859,
+      "teacher_kappa": 0.8529666751622722,
+      "teacher_category_agreement": 0.9435,
+      "dataset_agreement": 0.9303,
+      "dataset_agreement_95ci": [
+        0.9251421218896245,
+        0.9351274091125712
+      ],
+      "dataset_macro_f1": 0.9250876954706468,
+      "dataset_kappa": 0.9274413049605309,
+      "dataset_category_agreement": 0.9871
+    },
+    {
+      "source": "dataset",
+      "support_size": 500,
+      "subset_seed": 0,
+      "method": "hybrid",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8788,
+      "teacher_agreement_95ci": [
+        0.8722575859148284,
+        0.885051496919547
+      ],
+      "teacher_macro_f1": 0.8739355925129838,
+      "teacher_kappa": 0.8738851793234127,
+      "teacher_category_agreement": 0.9442,
+      "dataset_agreement": 0.947,
+      "dataset_agreement_95ci": [
+        0.9424348660709352,
+        0.9512218393856797
+      ],
+      "dataset_macro_f1": 0.9449277296981596,
+      "dataset_kappa": 0.9448359788904985,
+      "dataset_category_agreement": 0.9879
+    },
+    {
+      "source": "dataset",
+      "support_size": 500,
+      "subset_seed": 0,
+      "method": "majority",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.0305,
+      "teacher_agreement_95ci": [
+        0.027305788856246564,
+        0.03405478561381876
+      ],
+      "teacher_macro_f1": 0.0021923913238808923,
+      "teacher_kappa": 0.0,
+      "teacher_category_agreement": 0.0751,
+      "dataset_agreement": 0.0327,
+      "dataset_agreement_95ci": [
+        0.029389694497558846,
+        0.03636919037967548
+      ],
+      "dataset_macro_f1": 0.0023455236004863195,
+      "dataset_kappa": 0.0,
+      "dataset_category_agreement": 0.0745
+    },
+    {
+      "source": "dataset",
+      "support_size": 500,
+      "subset_seed": 0,
+      "method": "prior_random",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.038,
+      "teacher_agreement_95ci": [
+        0.0344265516422164,
+        0.04192826285228877
+      ],
+      "teacher_macro_f1": 0.03648262750313964,
+      "teacher_kappa": 0.0001760604733428428,
+      "teacher_category_agreement": 0.1248,
+      "dataset_agreement": 0.039,
+      "dataset_agreement_95ci": [
+        0.035379232816902695,
+        0.04297481368086112
+      ],
+      "dataset_macro_f1": 0.03737793396490118,
+      "dataset_kappa": 0.0009643448956758727,
+      "dataset_category_agreement": 0.1243
+    },
+    {
+      "source": "jev",
+      "support_size": 1000,
+      "subset_seed": 0,
+      "method": "nearest",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.887,
+      "teacher_agreement_95ci": [
+        0.8806456996924839,
+        0.8930570855686124
+      ],
+      "teacher_macro_f1": 0.8832558926334306,
+      "teacher_kappa": 0.882320919724705,
+      "teacher_category_agreement": 0.9576,
+      "dataset_agreement": 0.8694,
+      "dataset_agreement_95ci": [
+        0.8626535545797611,
+        0.8758627474239828
+      ],
+      "dataset_macro_f1": 0.8639532251864838,
+      "dataset_kappa": 0.8640772204578395,
+      "dataset_category_agreement": 0.9401
+    },
+    {
+      "source": "jev",
+      "support_size": 1000,
+      "subset_seed": 0,
+      "method": "centroid",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8939,
+      "teacher_agreement_95ci": [
+        0.8877119926330168,
+        0.8997854934505642
+      ],
+      "teacher_macro_f1": 0.8902737897511407,
+      "teacher_kappa": 0.8895345328793332,
+      "teacher_category_agreement": 0.9511,
+      "dataset_agreement": 0.9227,
+      "dataset_agreement_95ci": [
+        0.9173017580919753,
+        0.9277736096854545
+      ],
+      "dataset_macro_f1": 0.9199287655803953,
+      "dataset_kappa": 0.9195426441680282,
+      "dataset_category_agreement": 0.9733
+    },
+    {
+      "source": "jev",
+      "support_size": 1000,
+      "subset_seed": 0,
+      "method": "weighted_knn",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.9021,
+      "teacher_agreement_95ci": [
+        0.8961200570439245,
+        0.9077711314663774
+      ],
+      "teacher_macro_f1": 0.8984848116516656,
+      "teacher_kappa": 0.898029464714268,
+      "teacher_category_agreement": 0.965,
+      "dataset_agreement": 0.8832,
+      "dataset_agreement_95ci": [
+        0.8767572927270054,
+        0.8893484109217079
+      ],
+      "dataset_macro_f1": 0.8776233128623159,
+      "dataset_kappa": 0.8784303408559279,
+      "dataset_category_agreement": 0.945
+    },
+    {
+      "source": "jev",
+      "support_size": 1000,
+      "subset_seed": 0,
+      "method": "soft_knn",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.9013,
+      "teacher_agreement_95ci": [
+        0.8952992278303185,
+        0.9069925750773764
+      ],
+      "teacher_macro_f1": 0.8970201203180258,
+      "teacher_kappa": 0.897201757902016,
+      "teacher_category_agreement": 0.964,
+      "dataset_agreement": 0.8915,
+      "dataset_agreement_95ci": [
+        0.8852532805357817,
+        0.8974460487399784
+      ],
+      "dataset_macro_f1": 0.885351889454646,
+      "dataset_kappa": 0.8870715386190619,
+      "dataset_category_agreement": 0.9559
+    },
+    {
+      "source": "jev",
+      "support_size": 1000,
+      "subset_seed": 0,
+      "method": "filtered_centroid",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8938,
+      "teacher_agreement_95ci": [
+        0.8876095272298496,
+        0.8996880356534054
+      ],
+      "teacher_macro_f1": 0.8898908483806381,
+      "teacher_kappa": 0.889430668203268,
+      "teacher_category_agreement": 0.9522,
+      "dataset_agreement": 0.9214,
+      "dataset_agreement_95ci": [
+        0.9159621874388979,
+        0.9265141787342959
+      ],
+      "dataset_macro_f1": 0.9179998496557832,
+      "dataset_kappa": 0.9181890596706724,
+      "dataset_category_agreement": 0.9724
+    },
+    {
+      "source": "jev",
+      "support_size": 1000,
+      "subset_seed": 0,
+      "method": "hybrid",
+      "selected_on_validation": true,
+      "teacher_agreement": 0.9042,
+      "teacher_agreement_95ci": [
+        0.8982753047003504,
+        0.9098142710167945
+      ],
+      "teacher_macro_f1": 0.8996420140700345,
+      "teacher_kappa": 0.9002356552540387,
+      "teacher_category_agreement": 0.9612,
+      "dataset_agreement": 0.9167,
+      "dataset_agreement_95ci": [
+        0.9111225949910322,
+        0.9219573807668457
+      ],
+      "dataset_macro_f1": 0.9113041911555655,
+      "dataset_kappa": 0.9132912564495613,
+      "dataset_category_agreement": 0.9715
+    },
+    {
+      "source": "jev",
+      "support_size": 1000,
+      "subset_seed": 0,
+      "method": "majority",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.0542,
+      "teacher_agreement_95ci": [
+        0.049931145085800314,
+        0.05881122786149492
+      ],
+      "teacher_macro_f1": 0.003808399558731564,
+      "teacher_kappa": 0.0,
+      "teacher_category_agreement": 0.1138,
+      "dataset_agreement": 0.0462,
+      "dataset_agreement_95ci": [
+        0.04225704225860869,
+        0.050491474662617365
+      ],
+      "dataset_macro_f1": 0.003271097516939612,
+      "dataset_kappa": 0.0,
+      "dataset_category_agreement": 0.1006
+    },
+    {
+      "source": "jev",
+      "support_size": 1000,
+      "subset_seed": 0,
+      "method": "prior_random",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.0375,
+      "teacher_agreement_95ci": [
+        0.03395047130606028,
+        0.04140472718681556
+      ],
+      "teacher_macro_f1": 0.035723132112731204,
+      "teacher_kappa": -0.0014377733151282879,
+      "teacher_category_agreement": 0.1213,
+      "dataset_agreement": 0.0385,
+      "dataset_agreement_95ci": [
+        0.03490280656189386,
+        0.04245162393424062
+      ],
+      "dataset_macro_f1": 0.036908512497225675,
+      "dataset_kappa": 0.00010540750483112316,
+      "dataset_category_agreement": 0.12
+    },
+    {
+      "source": "dataset",
+      "support_size": 1000,
+      "subset_seed": 0,
+      "method": "nearest",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8654,
+      "teacher_agreement_95ci": [
+        0.8585702244974365,
+        0.871949149493273
+      ],
+      "teacher_macro_f1": 0.8580737460559535,
+      "teacher_kappa": 0.8599249466208418,
+      "teacher_category_agreement": 0.9433,
+      "dataset_agreement": 0.9374,
+      "dataset_agreement_95ci": [
+        0.932482122122975,
+        0.9419819561023571
+      ],
+      "dataset_macro_f1": 0.9336287108152382,
+      "dataset_kappa": 0.9348459793297724,
+      "dataset_category_agreement": 0.9863
+    },
+    {
+      "source": "dataset",
+      "support_size": 1000,
+      "subset_seed": 0,
+      "method": "centroid",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8827,
+      "teacher_agreement_95ci": [
+        0.8762458209753705,
+        0.8888602666717136
+      ],
+      "teacher_macro_f1": 0.8776769721351121,
+      "teacher_kappa": 0.8779313020886932,
+      "teacher_category_agreement": 0.9451,
+      "dataset_agreement": 0.952,
+      "dataset_agreement_95ci": [
+        0.9476339018610266,
+        0.9560189636118815
+      ],
+      "dataset_macro_f1": 0.9498642036135195,
+      "dataset_kappa": 0.9500380751502293,
+      "dataset_category_agreement": 0.9886
+    },
+    {
+      "source": "dataset",
+      "support_size": 1000,
+      "subset_seed": 0,
+      "method": "weighted_knn",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.877,
+      "teacher_agreement_95ci": [
+        0.8704175897351235,
+        0.8832928754933863
+      ],
+      "teacher_macro_f1": 0.8708954194025696,
+      "teacher_kappa": 0.8719856683896772,
+      "teacher_category_agreement": 0.9467,
+      "dataset_agreement": 0.9497,
+      "dataset_agreement_95ci": [
+        0.9452408969850926,
+        0.9538137348803207
+      ],
+      "dataset_macro_f1": 0.9463089897084584,
+      "dataset_kappa": 0.9476353825242594,
+      "dataset_category_agreement": 0.9904
+    },
+    {
+      "source": "dataset",
+      "support_size": 1000,
+      "subset_seed": 0,
+      "method": "hybrid",
+      "selected_on_validation": true,
+      "teacher_agreement": 0.878,
+      "teacher_agreement_95ci": [
+        0.8714397540415459,
+        0.8842699431902226
+      ],
+      "teacher_macro_f1": 0.8722032194960444,
+      "teacher_kappa": 0.873023637638604,
+      "teacher_category_agreement": 0.9468,
+      "dataset_agreement": 0.9507,
+      "dataset_agreement_95ci": [
+        0.9462810200146463,
+        0.9547728438540257
+      ],
+      "dataset_macro_f1": 0.9474870879272437,
+      "dataset_kappa": 0.9486746434321809,
+      "dataset_category_agreement": 0.9907
+    },
+    {
+      "source": "dataset",
+      "support_size": 1000,
+      "subset_seed": 0,
+      "method": "majority",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.0305,
+      "teacher_agreement_95ci": [
+        0.027305788856246564,
+        0.03405478561381876
+      ],
+      "teacher_macro_f1": 0.0021923913238808923,
+      "teacher_kappa": 0.0,
+      "teacher_category_agreement": 0.0751,
+      "dataset_agreement": 0.0327,
+      "dataset_agreement_95ci": [
+        0.029389694497558846,
+        0.03636919037967548
+      ],
+      "dataset_macro_f1": 0.0023455236004863195,
+      "dataset_kappa": 0.0,
+      "dataset_category_agreement": 0.0745
+    },
+    {
+      "source": "dataset",
+      "support_size": 1000,
+      "subset_seed": 0,
+      "method": "prior_random",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.0393,
+      "teacher_agreement_95ci": [
+        0.03566516949826361,
+        0.043288646600477806
+      ],
+      "teacher_macro_f1": 0.037108428817364675,
+      "teacher_kappa": 0.001159411984303027,
+      "teacher_category_agreement": 0.1204,
+      "dataset_agreement": 0.0398,
+      "dataset_agreement_95ci": [
+        0.03614186338857826,
+        0.04381156871179247
+      ],
+      "dataset_macro_f1": 0.03754137472763136,
+      "dataset_kappa": 0.0015067037146987428,
+      "dataset_category_agreement": 0.119
+    },
+    {
+      "source": "jev",
+      "support_size": 2000,
+      "subset_seed": 0,
+      "method": "nearest",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.9068,
+      "teacher_agreement_95ci": [
+        0.9009448818594445,
+        0.912342697066173
+      ],
+      "teacher_macro_f1": 0.9045811722202275,
+      "teacher_kappa": 0.9029391372674399,
+      "teacher_category_agreement": 0.9674,
+      "dataset_agreement": 0.8837,
+      "dataset_agreement_95ci": [
+        0.8772688013994484,
+        0.8898365182508944
+      ],
+      "dataset_macro_f1": 0.8797582712485619,
+      "dataset_kappa": 0.8789605351397236,
+      "dataset_category_agreement": 0.9436
+    },
+    {
+      "source": "jev",
+      "support_size": 2000,
+      "subset_seed": 0,
+      "method": "centroid",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8899,
+      "teacher_agreement_95ci": [
+        0.8836146613084712,
+        0.8958858967620751
+      ],
+      "teacher_macro_f1": 0.8855343008596619,
+      "teacher_kappa": 0.8853757021662212,
+      "teacher_category_agreement": 0.9501,
+      "dataset_agreement": 0.9262,
+      "dataset_agreement_95ci": [
+        0.920910479937288,
+        0.9311621998515471
+      ],
+      "dataset_macro_f1": 0.9243901283954197,
+      "dataset_kappa": 0.9231848270173827,
+      "dataset_category_agreement": 0.9787
+    },
+    {
+      "source": "jev",
+      "support_size": 2000,
+      "subset_seed": 0,
+      "method": "weighted_knn",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.9147,
+      "teacher_agreement_95ci": [
+        0.9090647707583752,
+        0.9200167409929856
+      ],
+      "teacher_macro_f1": 0.9119821514279925,
+      "teacher_kappa": 0.9111603576894381,
+      "teacher_category_agreement": 0.9713,
+      "dataset_agreement": 0.8939,
+      "dataset_agreement_95ci": [
+        0.8877119926330168,
+        0.8997854934505642
+      ],
+      "dataset_macro_f1": 0.8897277051589398,
+      "dataset_kappa": 0.8895732203756538,
+      "dataset_category_agreement": 0.9482
+    },
+    {
+      "source": "jev",
+      "support_size": 2000,
+      "subset_seed": 0,
+      "method": "soft_knn",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.9146,
+      "teacher_agreement_95ci": [
+        0.9089619033511235,
+        0.9199196851999113
+      ],
+      "teacher_macro_f1": 0.9110311731487527,
+      "teacher_kappa": 0.911065130649697,
+      "teacher_category_agreement": 0.9713,
+      "dataset_agreement": 0.906,
+      "dataset_agreement_95ci": [
+        0.9001233324563265,
+        0.9115648608666842
+      ],
+      "dataset_macro_f1": 0.9005634530054598,
+      "dataset_kappa": 0.9021704953457509,
+      "dataset_category_agreement": 0.9589
+    },
+    {
+      "source": "jev",
+      "support_size": 2000,
+      "subset_seed": 0,
+      "method": "filtered_centroid",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8898,
+      "teacher_agreement_95ci": [
+        0.8835122612488766,
+        0.8957883736213439
+      ],
+      "teacher_macro_f1": 0.8848485506169298,
+      "teacher_kappa": 0.8852631524477779,
+      "teacher_category_agreement": 0.9482,
+      "dataset_agreement": 0.9309,
+      "dataset_agreement_95ci": [
+        0.9257617947322282,
+        0.9357072754719226
+      ],
+      "dataset_macro_f1": 0.9287971903560148,
+      "dataset_kappa": 0.9280792966242639,
+      "dataset_category_agreement": 0.9824
+    },
+    {
+      "source": "jev",
+      "support_size": 2000,
+      "subset_seed": 0,
+      "method": "hybrid",
+      "selected_on_validation": true,
+      "teacher_agreement": 0.9141,
+      "teacher_agreement_95ci": [
+        0.908447599852065,
+        0.9194343726973405
+      ],
+      "teacher_macro_f1": 0.9109219686674244,
+      "teacher_kappa": 0.9105480928702404,
+      "teacher_category_agreement": 0.969,
+      "dataset_agreement": 0.9155,
+      "dataset_agreement_95ci": [
+        0.9098877911065302,
+        0.9207931062474375
+      ],
+      "dataset_macro_f1": 0.9104917426659972,
+      "dataset_kappa": 0.912051947344741,
+      "dataset_category_agreement": 0.9649
+    },
+    {
+      "source": "jev",
+      "support_size": 2000,
+      "subset_seed": 0,
+      "method": "majority",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.0542,
+      "teacher_agreement_95ci": [
+        0.049931145085800314,
+        0.05881122786149492
+      ],
+      "teacher_macro_f1": 0.003808399558731564,
+      "teacher_kappa": 0.0,
+      "teacher_category_agreement": 0.1138,
+      "dataset_agreement": 0.0462,
+      "dataset_agreement_95ci": [
+        0.04225704225860869,
+        0.050491474662617365
+      ],
+      "dataset_macro_f1": 0.003271097516939612,
+      "dataset_kappa": 0.0,
+      "dataset_category_agreement": 0.1006
+    },
+    {
+      "source": "jev",
+      "support_size": 2000,
+      "subset_seed": 0,
+      "method": "prior_random",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.0371,
+      "teacher_agreement_95ci": [
+        0.033569734988641506,
+        0.04098577070293087
+      ],
+      "teacher_macro_f1": 0.03502376116936358,
+      "teacher_kappa": -0.001783463791640072,
+      "teacher_category_agreement": 0.12,
+      "dataset_agreement": 0.0367,
+      "dataset_agreement_95ci": [
+        0.033189114320119714,
+        0.04056669857014922
+      ],
+      "dataset_macro_f1": 0.034977867507560476,
+      "dataset_kappa": -0.0014773376168384367,
+      "dataset_category_agreement": 0.1187
+    },
+    {
+      "source": "dataset",
+      "support_size": 2000,
+      "subset_seed": 0,
+      "method": "nearest",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8842,
+      "teacher_agreement_95ci": [
+        0.8777803471993272,
+        0.8903245884526448
+      ],
+      "teacher_macro_f1": 0.8788321951323288,
+      "teacher_kappa": 0.8794848846778581,
+      "teacher_category_agreement": 0.9489,
+      "dataset_agreement": 0.9598,
+      "dataset_agreement_95ci": [
+        0.955770211358904,
+        0.9634766637394218
+      ],
+      "dataset_macro_f1": 0.9580183115332778,
+      "dataset_kappa": 0.9581601990400513,
+      "dataset_category_agreement": 0.993
+    },
+    {
+      "source": "dataset",
+      "support_size": 2000,
+      "subset_seed": 0,
+      "method": "centroid",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8836,
+      "teacher_agreement_95ci": [
+        0.8771664967014087,
+        0.8897388997486083
+      ],
+      "teacher_macro_f1": 0.8791324833127121,
+      "teacher_kappa": 0.8788722141506787,
+      "teacher_category_agreement": 0.9459,
+      "dataset_agreement": 0.9514,
+      "dataset_agreement_95ci": [
+        0.9470093917792698,
+        0.9554439344916833
+      ],
+      "dataset_macro_f1": 0.949201799109914,
+      "dataset_kappa": 0.9494152959859872,
+      "dataset_category_agreement": 0.9893
+    },
+    {
+      "source": "dataset",
+      "support_size": 2000,
+      "subset_seed": 0,
+      "method": "weighted_knn",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8838,
+      "teacher_agreement_95ci": [
+        0.8773711075825785,
+        0.8899341352680901
+      ],
+      "teacher_macro_f1": 0.8782216081800568,
+      "teacher_kappa": 0.8790721692506752,
+      "teacher_category_agreement": 0.9495,
+      "dataset_agreement": 0.9595,
+      "dataset_agreement_95ci": [
+        0.9554566141252407,
+        0.9631904913721074
+      ],
+      "dataset_macro_f1": 0.9575752505961549,
+      "dataset_kappa": 0.9578476840112519,
+      "dataset_category_agreement": 0.9936
+    },
+    {
+      "source": "dataset",
+      "support_size": 2000,
+      "subset_seed": 0,
+      "method": "hybrid",
+      "selected_on_validation": true,
+      "teacher_agreement": 0.889,
+      "teacher_agreement_95ci": [
+        0.8826931179776982,
+        0.8950081312899154
+      ],
+      "teacher_macro_f1": 0.8835605332871929,
+      "teacher_kappa": 0.8844867410291076,
+      "teacher_category_agreement": 0.9499,
+      "dataset_agreement": 0.966,
+      "dataset_agreement_95ci": [
+        0.9622652076103402,
+        0.9693769059081891
+      ],
+      "dataset_macro_f1": 0.9642705064099362,
+      "dataset_kappa": 0.964611977357286,
+      "dataset_category_agreement": 0.9946
+    },
+    {
+      "source": "dataset",
+      "support_size": 2000,
+      "subset_seed": 0,
+      "method": "majority",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.0372,
+      "teacher_agreement_95ci": [
+        0.03366490829585304,
+        0.0410905205960452
+      ],
+      "teacher_macro_f1": 0.0026567253717273,
+      "teacher_kappa": 0.0,
+      "teacher_category_agreement": 0.0829,
+      "dataset_agreement": 0.0372,
+      "dataset_agreement_95ci": [
+        0.03366490829585304,
+        0.0410905205960452
+      ],
+      "dataset_macro_f1": 0.0026567253717273,
+      "dataset_kappa": 0.0,
+      "dataset_category_agreement": 0.0802
+    },
+    {
+      "source": "dataset",
+      "support_size": 2000,
+      "subset_seed": 0,
+      "method": "prior_random",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.036,
+      "teacher_agreement_95ci": [
+        0.032523311925956866,
+        0.03983303856203099
+      ],
+      "teacher_macro_f1": 0.03470190545249956,
+      "teacher_kappa": -0.0021187951538199634,
+      "teacher_category_agreement": 0.1186,
+      "dataset_agreement": 0.0366,
+      "dataset_agreement_95ci": [
+        0.03309397743507336,
+        0.0404619122548697
+      ],
+      "dataset_macro_f1": 0.035342287155429544,
+      "dataset_kappa": -0.0014688972804557388,
+      "dataset_category_agreement": 0.1179
+    },
+    {
+      "source": "jev",
+      "support_size": 500,
+      "subset_seed": 42,
+      "method": "nearest",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8504,
+      "teacher_agreement_95ci": [
+        0.8432747162655185,
+        0.8572561776763115
+      ],
+      "teacher_macro_f1": 0.8448351066425033,
+      "teacher_kappa": 0.8441743524420957,
+      "teacher_category_agreement": 0.9438,
+      "dataset_agreement": 0.8378,
+      "dataset_agreement_95ci": [
+        0.8304454109625724,
+        0.8448951597381985
+      ],
+      "dataset_macro_f1": 0.8302567064247591,
+      "dataset_kappa": 0.8311360879784729,
+      "dataset_category_agreement": 0.9202
+    },
+    {
+      "source": "jev",
+      "support_size": 500,
+      "subset_seed": 42,
+      "method": "centroid",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8886,
+      "teacher_agreement_95ci": [
+        0.882283584283804,
+        0.8946179721825059
+      ],
+      "teacher_macro_f1": 0.8864872617992096,
+      "teacher_kappa": 0.8840199501510666,
+      "teacher_category_agreement": 0.9578,
+      "dataset_agreement": 0.8885,
+      "dataset_agreement_95ci": [
+        0.8821812047923988,
+        0.8945204284735854
+      ],
+      "dataset_macro_f1": 0.8829700767350501,
+      "dataset_kappa": 0.8839462190750241,
+      "dataset_category_agreement": 0.9489
+    },
+    {
+      "source": "jev",
+      "support_size": 500,
+      "subset_seed": 42,
+      "method": "weighted_knn",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8657,
+      "teacher_agreement_95ci": [
+        0.8588764049948677,
+        0.8722427385968193
+      ],
+      "teacher_macro_f1": 0.8589943424501977,
+      "teacher_kappa": 0.8600889819489888,
+      "teacher_category_agreement": 0.9526,
+      "dataset_agreement": 0.8466,
+      "dataset_agreement_95ci": [
+        0.8394038343591067,
+        0.8535299779703404
+      ],
+      "dataset_macro_f1": 0.837958130548153,
+      "dataset_kappa": 0.8403100009692788,
+      "dataset_category_agreement": 0.9286
+    },
+    {
+      "source": "jev",
+      "support_size": 500,
+      "subset_seed": 42,
+      "method": "soft_knn",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8714,
+      "teacher_agreement_95ci": [
+        0.8646959822109465,
+        0.8778187837993149
+      ],
+      "teacher_macro_f1": 0.8638305028598182,
+      "teacher_kappa": 0.8660324075523345,
+      "teacher_category_agreement": 0.955,
+      "dataset_agreement": 0.8576,
+      "dataset_agreement_95ci": [
+        0.8506133320407465,
+        0.8643120323245457
+      ],
+      "dataset_macro_f1": 0.8474582966508785,
+      "dataset_kappa": 0.8517822564354942,
+      "dataset_category_agreement": 0.9386
+    },
+    {
+      "source": "jev",
+      "support_size": 500,
+      "subset_seed": 42,
+      "method": "filtered_centroid",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8846,
+      "teacher_agreement_95ci": [
+        0.8781896107112467,
+        0.890715017742029
+      ],
+      "teacher_macro_f1": 0.8804656774172243,
+      "teacher_kappa": 0.8798442385671611,
+      "teacher_category_agreement": 0.9492,
+      "dataset_agreement": 0.9121,
+      "dataset_agreement_95ci": [
+        0.9063909372467261,
+        0.9174925712961622
+      ],
+      "dataset_macro_f1": 0.9091147101534479,
+      "dataset_kappa": 0.9085013231864111,
+      "dataset_category_agreement": 0.9683
+    },
+    {
+      "source": "jev",
+      "support_size": 500,
+      "subset_seed": 42,
+      "method": "hybrid",
+      "selected_on_validation": true,
+      "teacher_agreement": 0.8871,
+      "teacher_agreement_95ci": [
+        0.8807480558385539,
+        0.8931546526228682
+      ],
+      "teacher_macro_f1": 0.8833751191754393,
+      "teacher_kappa": 0.8824403259962039,
+      "teacher_category_agreement": 0.9569,
+      "dataset_agreement": 0.8923,
+      "dataset_agreement_95ci": [
+        0.8860727457811958,
+        0.8982259690971713
+      ],
+      "dataset_macro_f1": 0.886595827952867,
+      "dataset_kappa": 0.8878973453612578,
+      "dataset_category_agreement": 0.9549
+    },
+    {
+      "source": "jev",
+      "support_size": 500,
+      "subset_seed": 42,
+      "method": "majority",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.034,
+      "teacher_agreement_95ci": [
+        0.03062309409181081,
+        0.03773479238965977
+      ],
+      "teacher_macro_f1": 0.002435704563364138,
+      "teacher_kappa": 0.0,
+      "teacher_category_agreement": 0.1327,
+      "dataset_agreement": 0.0347,
+      "dataset_agreement_95ci": [
+        0.031287811116641966,
+        0.03846953776710967
+      ],
+      "dataset_macro_f1": 0.0024841696823913895,
+      "dataset_kappa": 0.0,
+      "dataset_category_agreement": 0.1278
+    },
+    {
+      "source": "jev",
+      "support_size": 500,
+      "subset_seed": 42,
+      "method": "prior_random",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.0365,
+      "teacher_agreement_95ci": [
+        0.03299884792033432,
+        0.04035711856928287
+      ],
+      "teacher_macro_f1": 0.034276149576312476,
+      "teacher_kappa": -0.0024225854058841367,
+      "teacher_category_agreement": 0.1207,
+      "dataset_agreement": 0.0371,
+      "dataset_agreement_95ci": [
+        0.033569734988641506,
+        0.04098577070293087
+      ],
+      "dataset_macro_f1": 0.035163599650026564,
+      "dataset_kappa": -0.0012013584479704242,
+      "dataset_category_agreement": 0.1198
+    },
+    {
+      "source": "dataset",
+      "support_size": 500,
+      "subset_seed": 42,
+      "method": "nearest",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8412,
+      "teacher_agreement_95ci": [
+        0.8339056947765902,
+        0.84823226473526
+      ],
+      "teacher_macro_f1": 0.8321661021000869,
+      "teacher_kappa": 0.8347633810055199,
+      "teacher_category_agreement": 0.9346,
+      "dataset_agreement": 0.9102,
+      "dataset_agreement_95ci": [
+        0.9044379065606991,
+        0.9156470611759977
+      ],
+      "dataset_macro_f1": 0.9044982703030469,
+      "dataset_kappa": 0.9065487017122287,
+      "dataset_category_agreement": 0.9761
+    },
+    {
+      "source": "dataset",
+      "support_size": 500,
+      "subset_seed": 42,
+      "method": "centroid",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8733,
+      "teacher_agreement_95ci": [
+        0.866636771645077,
+        0.8796765351713757
+      ],
+      "teacher_macro_f1": 0.8675857044777237,
+      "teacher_kappa": 0.8681698234045823,
+      "teacher_category_agreement": 0.9437,
+      "dataset_agreement": 0.9395,
+      "dataset_agreement_95ci": [
+        0.9346563151996191,
+        0.9440061502325562
+      ],
+      "dataset_macro_f1": 0.936037754189523,
+      "dataset_kappa": 0.9370376586817513,
+      "dataset_category_agreement": 0.9866
+    },
+    {
+      "source": "dataset",
+      "support_size": 500,
+      "subset_seed": 42,
+      "method": "weighted_knn",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8412,
+      "teacher_agreement_95ci": [
+        0.8339056947765902,
+        0.84823226473526
+      ],
+      "teacher_macro_f1": 0.8321661021000869,
+      "teacher_kappa": 0.8347633810055199,
+      "teacher_category_agreement": 0.9346,
+      "dataset_agreement": 0.9102,
+      "dataset_agreement_95ci": [
+        0.9044379065606991,
+        0.9156470611759977
+      ],
+      "dataset_macro_f1": 0.9044982703030469,
+      "dataset_kappa": 0.9065487017122287,
+      "dataset_category_agreement": 0.9761
+    },
+    {
+      "source": "dataset",
+      "support_size": 500,
+      "subset_seed": 42,
+      "method": "hybrid",
+      "selected_on_validation": true,
+      "teacher_agreement": 0.8734,
+      "teacher_agreement_95ci": [
+        0.8667389316732191,
+        0.8797742983435594
+      ],
+      "teacher_macro_f1": 0.867551058975823,
+      "teacher_kappa": 0.8682749442774922,
+      "teacher_category_agreement": 0.9452,
+      "dataset_agreement": 0.9411,
+      "dataset_agreement_95ci": [
+        0.9363139070217562,
+        0.945547329615633
+      ],
+      "dataset_macro_f1": 0.9375734239686013,
+      "dataset_kappa": 0.9387034150897955,
+      "dataset_category_agreement": 0.9883
+    },
+    {
+      "source": "dataset",
+      "support_size": 500,
+      "subset_seed": 42,
+      "method": "majority",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.034,
+      "teacher_agreement_95ci": [
+        0.03062309409181081,
+        0.03773479238965977
+      ],
+      "teacher_macro_f1": 0.002435704563364138,
+      "teacher_kappa": 0.0,
+      "teacher_category_agreement": 0.1327,
+      "dataset_agreement": 0.0347,
+      "dataset_agreement_95ci": [
+        0.031287811116641966,
+        0.03846953776710967
+      ],
+      "dataset_macro_f1": 0.0024841696823913895,
+      "dataset_kappa": 0.0,
+      "dataset_category_agreement": 0.1278
+    },
+    {
+      "source": "dataset",
+      "support_size": 500,
+      "subset_seed": 42,
+      "method": "prior_random",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.0373,
+      "teacher_agreement_95ci": [
+        0.03376008880295818,
+        0.041195263289265927
+      ],
+      "teacher_macro_f1": 0.03590182118786548,
+      "teacher_kappa": -0.0006223669480431848,
+      "teacher_category_agreement": 0.1249,
+      "dataset_agreement": 0.0388,
+      "dataset_agreement_95ci": [
+        0.035188641958211225,
+        0.04276555813890086
+      ],
+      "dataset_macro_f1": 0.0372899863567105,
+      "dataset_kappa": 0.0009840701858786494,
+      "dataset_category_agreement": 0.1233
+    },
+    {
+      "source": "jev",
+      "support_size": 1000,
+      "subset_seed": 42,
+      "method": "nearest",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8896,
+      "teacher_agreement_95ci": [
+        0.8833074659081525,
+        0.8955933225614162
+      ],
+      "teacher_macro_f1": 0.8854722563420374,
+      "teacher_kappa": 0.8850194149508713,
+      "teacher_category_agreement": 0.9602,
+      "dataset_agreement": 0.8769,
+      "dataset_agreement_95ci": [
+        0.8703153809249847,
+        0.8831951611031993
+      ],
+      "dataset_macro_f1": 0.8710854854700352,
+      "dataset_kappa": 0.8718458875902293,
+      "dataset_category_agreement": 0.941
+    },
+    {
+      "source": "jev",
+      "support_size": 1000,
+      "subset_seed": 42,
+      "method": "centroid",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.89,
+      "teacher_agreement_95ci": [
+        0.8837170629634203,
+        0.895983418307452
+      ],
+      "teacher_macro_f1": 0.8866867605250509,
+      "teacher_kappa": 0.88548981124255,
+      "teacher_category_agreement": 0.9513,
+      "dataset_agreement": 0.9239,
+      "dataset_agreement_95ci": [
+        0.9185386697220441,
+        0.9289357764592963
+      ],
+      "dataset_macro_f1": 0.9215718555749676,
+      "dataset_kappa": 0.9207866392604399,
+      "dataset_category_agreement": 0.9749
+    },
+    {
+      "source": "jev",
+      "support_size": 1000,
+      "subset_seed": 42,
+      "method": "weighted_knn",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.9,
+      "teacher_agreement_95ci": [
+        0.8939656314740893,
+        0.9057271698293695
+      ],
+      "teacher_macro_f1": 0.8970368523353188,
+      "teacher_kappa": 0.8958469752097262,
+      "teacher_category_agreement": 0.9631,
+      "dataset_agreement": 0.8879,
+      "dataset_agreement_95ci": [
+        0.8815669607313341,
+        0.893935133332695
+      ],
+      "dataset_macro_f1": 0.8825533128576568,
+      "dataset_kappa": 0.8833092469115024,
+      "dataset_category_agreement": 0.9458
+    },
+    {
+      "source": "jev",
+      "support_size": 1000,
+      "subset_seed": 42,
+      "method": "soft_knn",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.9012,
+      "teacher_agreement_95ci": [
+        0.895196632501863,
+        0.9068952472055061
+      ],
+      "teacher_macro_f1": 0.8966947145618703,
+      "teacher_kappa": 0.8971038375373741,
+      "teacher_category_agreement": 0.9654,
+      "dataset_agreement": 0.903,
+      "dataset_agreement_95ci": [
+        0.8970436325658877,
+        0.9086468647473469
+      ],
+      "dataset_macro_f1": 0.8952997760412109,
+      "dataset_kappa": 0.8990359389381849,
+      "dataset_category_agreement": 0.9631
+    },
+    {
+      "source": "jev",
+      "support_size": 1000,
+      "subset_seed": 42,
+      "method": "filtered_centroid",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.886,
+      "teacher_agreement_95ci": [
+        0.8796222227444457,
+        0.8920813305133919
+      ],
+      "teacher_macro_f1": 0.8809745180723387,
+      "teacher_kappa": 0.8813183729798331,
+      "teacher_category_agreement": 0.9467,
+      "dataset_agreement": 0.9281,
+      "dataset_agreement_95ci": [
+        0.9228708906597746,
+        0.9330003299352522
+      ],
+      "dataset_macro_f1": 0.9257684121632047,
+      "dataset_kappa": 0.9251640806155422,
+      "dataset_category_agreement": 0.9801
+    },
+    {
+      "source": "jev",
+      "support_size": 1000,
+      "subset_seed": 42,
+      "method": "hybrid",
+      "selected_on_validation": true,
+      "teacher_agreement": 0.9025,
+      "teacher_agreement_95ci": [
+        0.8965305163037063,
+        0.9081603650078989
+      ],
+      "teacher_macro_f1": 0.8989134838851767,
+      "teacher_kappa": 0.8984798391945642,
+      "teacher_category_agreement": 0.961,
+      "dataset_agreement": 0.9203,
+      "dataset_agreement_95ci": [
+        0.9148290361875764,
+        0.9254481747820329
+      ],
+      "dataset_macro_f1": 0.9145677576225327,
+      "dataset_kappa": 0.9170305049060217,
+      "dataset_category_agreement": 0.9709
+    },
+    {
+      "source": "jev",
+      "support_size": 1000,
+      "subset_seed": 42,
+      "method": "majority",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.0542,
+      "teacher_agreement_95ci": [
+        0.049931145085800314,
+        0.05881122786149492
+      ],
+      "teacher_macro_f1": 0.003808399558731564,
+      "teacher_kappa": 0.0,
+      "teacher_category_agreement": 0.1138,
+      "dataset_agreement": 0.0462,
+      "dataset_agreement_95ci": [
+        0.04225704225860869,
+        0.050491474662617365
+      ],
+      "dataset_macro_f1": 0.003271097516939612,
+      "dataset_kappa": 0.0,
+      "dataset_category_agreement": 0.1006
+    },
+    {
+      "source": "jev",
+      "support_size": 1000,
+      "subset_seed": 42,
+      "method": "prior_random",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.0414,
+      "teacher_agreement_95ci": [
+        0.03766836746394034,
+        0.04548383584164423
+      ],
+      "teacher_macro_f1": 0.03890675526119428,
+      "teacher_kappa": 0.002739117562274851,
+      "teacher_category_agreement": 0.1273,
+      "dataset_agreement": 0.0402,
+      "dataset_agreement_95ci": [
+        0.03652333626057827,
+        0.04422978864109592
+      ],
+      "dataset_macro_f1": 0.03847294213445447,
+      "dataset_kappa": 0.0018546908420136177,
+      "dataset_category_agreement": 0.125
+    },
+    {
+      "source": "dataset",
+      "support_size": 1000,
+      "subset_seed": 42,
+      "method": "nearest",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8718,
+      "teacher_agreement_95ci": [
+        0.8651045300244866,
+        0.8782099287870782
+      ],
+      "teacher_macro_f1": 0.8652856333830113,
+      "teacher_kappa": 0.8665847331807057,
+      "teacher_category_agreement": 0.9442,
+      "dataset_agreement": 0.9455,
+      "dataset_agreement_95ci": [
+        0.9408773441290929,
+        0.9497805133226344
+      ],
+      "dataset_macro_f1": 0.9424038706494241,
+      "dataset_kappa": 0.9432743941104208,
+      "dataset_category_agreement": 0.9875
+    },
+    {
+      "source": "dataset",
+      "support_size": 1000,
+      "subset_seed": 42,
+      "method": "centroid",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8783,
+      "teacher_agreement_95ci": [
+        0.8717464304847544,
+        0.8845630363479915
+      ],
+      "teacher_macro_f1": 0.873563769078051,
+      "teacher_kappa": 0.8733617714026385,
+      "teacher_category_agreement": 0.9449,
+      "dataset_agreement": 0.947,
+      "dataset_agreement_95ci": [
+        0.9424348660709352,
+        0.9512218393856797
+      ],
+      "dataset_macro_f1": 0.9446807207935367,
+      "dataset_kappa": 0.9448353536188101,
+      "dataset_category_agreement": 0.9878
+    },
+    {
+      "source": "dataset",
+      "support_size": 1000,
+      "subset_seed": 42,
+      "method": "weighted_knn",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8698,
+      "teacher_agreement_95ci": [
+        0.8630619988533929,
+        0.8762539959516548
+      ],
+      "teacher_macro_f1": 0.8629635319172507,
+      "teacher_kappa": 0.8645062990417993,
+      "teacher_category_agreement": 0.9464,
+      "dataset_agreement": 0.9408,
+      "dataset_agreement_95ci": [
+        0.9360030366141178,
+        0.9452584304222936
+      ],
+      "dataset_macro_f1": 0.9373830167403433,
+      "dataset_kappa": 0.9383817152402981,
+      "dataset_category_agreement": 0.9898
+    },
+    {
+      "source": "dataset",
+      "support_size": 1000,
+      "subset_seed": 42,
+      "method": "hybrid",
+      "selected_on_validation": true,
+      "teacher_agreement": 0.8762,
+      "teacher_agreement_95ci": [
+        0.869599957806104,
+        0.8825111218197987
+      ],
+      "teacher_macro_f1": 0.8701981357669429,
+      "teacher_kappa": 0.8711692306001674,
+      "teacher_category_agreement": 0.9472,
+      "dataset_agreement": 0.9488,
+      "dataset_agreement_95ci": [
+        0.9443051867264983,
+        0.9529501363359824
+      ],
+      "dataset_macro_f1": 0.9462406646821527,
+      "dataset_kappa": 0.9467077949259326,
+      "dataset_category_agreement": 0.991
+    },
+    {
+      "source": "dataset",
+      "support_size": 1000,
+      "subset_seed": 42,
+      "method": "majority",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.0513,
+      "teacher_agreement_95ci": [
+        0.047145842042160484,
+        0.05579875809568468
+      ],
+      "teacher_macro_f1": 0.0036145724341291735,
+      "teacher_kappa": 0.0,
+      "teacher_category_agreement": 0.2342,
+      "dataset_agreement": 0.0521,
+      "dataset_agreement_95ci": [
+        0.04791383183117402,
+        0.05663015390927806
+      ],
+      "dataset_macro_f1": 0.0036681487113955514,
+      "dataset_kappa": 0.0,
+      "dataset_category_agreement": 0.2354
+    },
+    {
+      "source": "dataset",
+      "support_size": 1000,
+      "subset_seed": 42,
+      "method": "prior_random",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.0393,
+      "teacher_agreement_95ci": [
+        0.03566516949826361,
+        0.043288646600477806
+      ],
+      "teacher_macro_f1": 0.03762776381363576,
+      "teacher_kappa": 0.0013061194465948667,
+      "teacher_category_agreement": 0.1242,
+      "dataset_agreement": 0.0392,
+      "dataset_agreement_95ci": [
+        0.0355698505848916,
+        0.04318404231352394
+      ],
+      "dataset_macro_f1": 0.037807667776898354,
+      "dataset_kappa": 0.0010376087610165508,
+      "dataset_category_agreement": 0.1218
+    },
+    {
+      "source": "jev",
+      "support_size": 2000,
+      "subset_seed": 42,
+      "method": "nearest",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.9068,
+      "teacher_agreement_95ci": [
+        0.9009448818594445,
+        0.912342697066173
+      ],
+      "teacher_macro_f1": 0.9045811722202275,
+      "teacher_kappa": 0.9029391372674399,
+      "teacher_category_agreement": 0.9674,
+      "dataset_agreement": 0.8837,
+      "dataset_agreement_95ci": [
+        0.8772688013994484,
+        0.8898365182508944
+      ],
+      "dataset_macro_f1": 0.8797582712485619,
+      "dataset_kappa": 0.8789605351397236,
+      "dataset_category_agreement": 0.9436
+    },
+    {
+      "source": "jev",
+      "support_size": 2000,
+      "subset_seed": 42,
+      "method": "centroid",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8899,
+      "teacher_agreement_95ci": [
+        0.8836146613084712,
+        0.8958858967620751
+      ],
+      "teacher_macro_f1": 0.8855343008596619,
+      "teacher_kappa": 0.8853757021662212,
+      "teacher_category_agreement": 0.9501,
+      "dataset_agreement": 0.9262,
+      "dataset_agreement_95ci": [
+        0.920910479937288,
+        0.9311621998515471
+      ],
+      "dataset_macro_f1": 0.9243901283954197,
+      "dataset_kappa": 0.9231848270173827,
+      "dataset_category_agreement": 0.9787
+    },
+    {
+      "source": "jev",
+      "support_size": 2000,
+      "subset_seed": 42,
+      "method": "weighted_knn",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.9147,
+      "teacher_agreement_95ci": [
+        0.9090647707583752,
+        0.9200167409929856
+      ],
+      "teacher_macro_f1": 0.9119821514279925,
+      "teacher_kappa": 0.9111603576894381,
+      "teacher_category_agreement": 0.9713,
+      "dataset_agreement": 0.8939,
+      "dataset_agreement_95ci": [
+        0.8877119926330168,
+        0.8997854934505642
+      ],
+      "dataset_macro_f1": 0.8897277051589398,
+      "dataset_kappa": 0.8895732203756538,
+      "dataset_category_agreement": 0.9482
+    },
+    {
+      "source": "jev",
+      "support_size": 2000,
+      "subset_seed": 42,
+      "method": "soft_knn",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.9146,
+      "teacher_agreement_95ci": [
+        0.9089619033511235,
+        0.9199196851999113
+      ],
+      "teacher_macro_f1": 0.9110311731487527,
+      "teacher_kappa": 0.911065130649697,
+      "teacher_category_agreement": 0.9713,
+      "dataset_agreement": 0.906,
+      "dataset_agreement_95ci": [
+        0.9001233324563265,
+        0.9115648608666842
+      ],
+      "dataset_macro_f1": 0.9005634530054598,
+      "dataset_kappa": 0.9021704953457509,
+      "dataset_category_agreement": 0.9589
+    },
+    {
+      "source": "jev",
+      "support_size": 2000,
+      "subset_seed": 42,
+      "method": "filtered_centroid",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8898,
+      "teacher_agreement_95ci": [
+        0.8835122612488766,
+        0.8957883736213439
+      ],
+      "teacher_macro_f1": 0.8848485506169298,
+      "teacher_kappa": 0.8852631524477779,
+      "teacher_category_agreement": 0.9482,
+      "dataset_agreement": 0.9309,
+      "dataset_agreement_95ci": [
+        0.9257617947322282,
+        0.9357072754719226
+      ],
+      "dataset_macro_f1": 0.9287971903560148,
+      "dataset_kappa": 0.9280792966242639,
+      "dataset_category_agreement": 0.9824
+    },
+    {
+      "source": "jev",
+      "support_size": 2000,
+      "subset_seed": 42,
+      "method": "hybrid",
+      "selected_on_validation": true,
+      "teacher_agreement": 0.9141,
+      "teacher_agreement_95ci": [
+        0.908447599852065,
+        0.9194343726973405
+      ],
+      "teacher_macro_f1": 0.9109219686674244,
+      "teacher_kappa": 0.9105480928702404,
+      "teacher_category_agreement": 0.969,
+      "dataset_agreement": 0.9155,
+      "dataset_agreement_95ci": [
+        0.9098877911065302,
+        0.9207931062474375
+      ],
+      "dataset_macro_f1": 0.9104917426659972,
+      "dataset_kappa": 0.912051947344741,
+      "dataset_category_agreement": 0.9649
+    },
+    {
+      "source": "jev",
+      "support_size": 2000,
+      "subset_seed": 42,
+      "method": "majority",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.0542,
+      "teacher_agreement_95ci": [
+        0.049931145085800314,
+        0.05881122786149492
+      ],
+      "teacher_macro_f1": 0.003808399558731564,
+      "teacher_kappa": 0.0,
+      "teacher_category_agreement": 0.1138,
+      "dataset_agreement": 0.0462,
+      "dataset_agreement_95ci": [
+        0.04225704225860869,
+        0.050491474662617365
+      ],
+      "dataset_macro_f1": 0.003271097516939612,
+      "dataset_kappa": 0.0,
+      "dataset_category_agreement": 0.1006
+    },
+    {
+      "source": "jev",
+      "support_size": 2000,
+      "subset_seed": 42,
+      "method": "prior_random",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.0384,
+      "teacher_agreement_95ci": [
+        0.0348075417687003,
+        0.04234696552710831
+      ],
+      "teacher_macro_f1": 0.03610250091059756,
+      "teacher_kappa": -0.00043728556103816985,
+      "teacher_category_agreement": 0.119,
+      "dataset_agreement": 0.0374,
+      "dataset_agreement_95ci": [
+        0.033855276482213766,
+        0.04129999881033621
+      ],
+      "dataset_macro_f1": 0.035245109227816956,
+      "dataset_kappa": -0.0008072686513032057,
+      "dataset_category_agreement": 0.1175
+    },
+    {
+      "source": "dataset",
+      "support_size": 2000,
+      "subset_seed": 42,
+      "method": "nearest",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8842,
+      "teacher_agreement_95ci": [
+        0.8777803471993272,
+        0.8903245884526448
+      ],
+      "teacher_macro_f1": 0.8788321951323288,
+      "teacher_kappa": 0.8794848846778581,
+      "teacher_category_agreement": 0.9489,
+      "dataset_agreement": 0.9598,
+      "dataset_agreement_95ci": [
+        0.955770211358904,
+        0.9634766637394218
+      ],
+      "dataset_macro_f1": 0.9580183115332778,
+      "dataset_kappa": 0.9581601990400513,
+      "dataset_category_agreement": 0.993
+    },
+    {
+      "source": "dataset",
+      "support_size": 2000,
+      "subset_seed": 42,
+      "method": "centroid",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8836,
+      "teacher_agreement_95ci": [
+        0.8771664967014087,
+        0.8897388997486083
+      ],
+      "teacher_macro_f1": 0.8791324833127121,
+      "teacher_kappa": 0.8788722141506787,
+      "teacher_category_agreement": 0.9459,
+      "dataset_agreement": 0.9514,
+      "dataset_agreement_95ci": [
+        0.9470093917792698,
+        0.9554439344916833
+      ],
+      "dataset_macro_f1": 0.949201799109914,
+      "dataset_kappa": 0.9494152959859872,
+      "dataset_category_agreement": 0.9893
+    },
+    {
+      "source": "dataset",
+      "support_size": 2000,
+      "subset_seed": 42,
+      "method": "weighted_knn",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8838,
+      "teacher_agreement_95ci": [
+        0.8773711075825785,
+        0.8899341352680901
+      ],
+      "teacher_macro_f1": 0.8782216081800568,
+      "teacher_kappa": 0.8790721692506752,
+      "teacher_category_agreement": 0.9495,
+      "dataset_agreement": 0.9595,
+      "dataset_agreement_95ci": [
+        0.9554566141252407,
+        0.9631904913721074
+      ],
+      "dataset_macro_f1": 0.9575752505961549,
+      "dataset_kappa": 0.9578476840112519,
+      "dataset_category_agreement": 0.9936
+    },
+    {
+      "source": "dataset",
+      "support_size": 2000,
+      "subset_seed": 42,
+      "method": "hybrid",
+      "selected_on_validation": true,
+      "teacher_agreement": 0.889,
+      "teacher_agreement_95ci": [
+        0.8826931179776982,
+        0.8950081312899154
+      ],
+      "teacher_macro_f1": 0.8835605332871929,
+      "teacher_kappa": 0.8844867410291076,
+      "teacher_category_agreement": 0.9499,
+      "dataset_agreement": 0.966,
+      "dataset_agreement_95ci": [
+        0.9622652076103402,
+        0.9693769059081891
+      ],
+      "dataset_macro_f1": 0.9642705064099362,
+      "dataset_kappa": 0.964611977357286,
+      "dataset_category_agreement": 0.9946
+    },
+    {
+      "source": "dataset",
+      "support_size": 2000,
+      "subset_seed": 42,
+      "method": "majority",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.0372,
+      "teacher_agreement_95ci": [
+        0.03366490829585304,
+        0.0410905205960452
+      ],
+      "teacher_macro_f1": 0.0026567253717273,
+      "teacher_kappa": 0.0,
+      "teacher_category_agreement": 0.0829,
+      "dataset_agreement": 0.0372,
+      "dataset_agreement_95ci": [
+        0.03366490829585304,
+        0.0410905205960452
+      ],
+      "dataset_macro_f1": 0.0026567253717273,
+      "dataset_kappa": 0.0,
+      "dataset_category_agreement": 0.0802
+    },
+    {
+      "source": "dataset",
+      "support_size": 2000,
+      "subset_seed": 42,
+      "method": "prior_random",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.0389,
+      "teacher_agreement_95ci": [
+        0.03528393401149463,
+        0.042870189285943314
+      ],
+      "teacher_macro_f1": 0.03689436060685938,
+      "teacher_kappa": 0.0007897202460732666,
+      "teacher_category_agreement": 0.1173,
+      "dataset_agreement": 0.0383,
+      "dataset_agreement_95ci": [
+        0.034712283854238454,
+        0.0422423002412443
+      ],
+      "dataset_macro_f1": 0.036202294760340606,
+      "dataset_kappa": 0.0001708141158789367,
+      "dataset_category_agreement": 0.1166
+    },
+    {
+      "source": "jev",
+      "support_size": 500,
+      "subset_seed": 2026,
+      "method": "nearest",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8537,
+      "teacher_agreement_95ci": [
+        0.8466375336414955,
+        0.8604908259110879
+      ],
+      "teacher_macro_f1": 0.8457703026248647,
+      "teacher_kappa": 0.8476366089591277,
+      "teacher_category_agreement": 0.9469,
+      "dataset_agreement": 0.8345,
+      "dataset_agreement_95ci": [
+        0.8270879807753859,
+        0.8416551243146315
+      ],
+      "dataset_macro_f1": 0.8268300666007801,
+      "dataset_kappa": 0.8277603718619228,
+      "dataset_category_agreement": 0.9327
+    },
+    {
+      "source": "jev",
+      "support_size": 500,
+      "subset_seed": 2026,
+      "method": "centroid",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8723,
+      "teacher_agreement_95ci": [
+        0.8656152442695157,
+        0.8786988305436783
+      ],
+      "teacher_macro_f1": 0.8675004576980072,
+      "teacher_kappa": 0.8670181455875137,
+      "teacher_category_agreement": 0.9456,
+      "dataset_agreement": 0.894,
+      "dataset_agreement_95ci": [
+        0.8878144597112133,
+        0.8998829495726935
+      ],
+      "dataset_macro_f1": 0.8926326413322949,
+      "dataset_kappa": 0.8896625992622842,
+      "dataset_category_agreement": 0.9624
+    },
+    {
+      "source": "jev",
+      "support_size": 500,
+      "subset_seed": 2026,
+      "method": "weighted_knn",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8691,
+      "teacher_agreement_95ci": [
+        0.8623472348091281,
+        0.8755692975936384
+      ],
+      "teacher_macro_f1": 0.8626727701304197,
+      "teacher_kappa": 0.8636757934178174,
+      "teacher_category_agreement": 0.9468,
+      "dataset_agreement": 0.8769,
+      "dataset_agreement_95ci": [
+        0.8703153809249847,
+        0.8831951611031993
+      ],
+      "dataset_macro_f1": 0.8735427391760664,
+      "dataset_kappa": 0.8718701326458467,
+      "dataset_category_agreement": 0.9513
+    },
+    {
+      "source": "jev",
+      "support_size": 500,
+      "subset_seed": 2026,
+      "method": "soft_knn",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8777,
+      "teacher_agreement_95ci": [
+        0.8711330901605455,
+        0.8839768374702454
+      ],
+      "teacher_macro_f1": 0.8721018548579655,
+      "teacher_kappa": 0.8726739453235686,
+      "teacher_category_agreement": 0.9524,
+      "dataset_agreement": 0.8994,
+      "dataset_agreement_95ci": [
+        0.8933502290653035,
+        0.9051430330362
+      ],
+      "dataset_macro_f1": 0.8949799242607432,
+      "dataset_kappa": 0.8952944296699032,
+      "dataset_category_agreement": 0.9696
+    },
+    {
+      "source": "jev",
+      "support_size": 500,
+      "subset_seed": 2026,
+      "method": "filtered_centroid",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8755,
+      "teacher_agreement_95ci": [
+        0.8688846018031403,
+        0.8818270154204814
+      ],
+      "teacher_macro_f1": 0.8702660055096758,
+      "teacher_kappa": 0.870367555979246,
+      "teacher_category_agreement": 0.9452,
+      "dataset_agreement": 0.9086,
+      "dataset_agreement_95ci": [
+        0.9027938361718608,
+        0.914092360359622
+      ],
+      "dataset_macro_f1": 0.9066125337663401,
+      "dataset_kappa": 0.9048652385398496,
+      "dataset_category_agreement": 0.9723
+    },
+    {
+      "source": "jev",
+      "support_size": 500,
+      "subset_seed": 2026,
+      "method": "hybrid",
+      "selected_on_validation": true,
+      "teacher_agreement": 0.8874,
+      "teacher_agreement_95ci": [
+        0.8810551335461534,
+        0.8934473445162463
+      ],
+      "teacher_macro_f1": 0.8832500449503363,
+      "teacher_kappa": 0.882780556384067,
+      "teacher_category_agreement": 0.9528,
+      "dataset_agreement": 0.9163,
+      "dataset_agreement_95ci": [
+        0.9107109569329683,
+        0.9215693260236062
+      ],
+      "dataset_macro_f1": 0.9128493809015095,
+      "dataset_kappa": 0.9128683087558637,
+      "dataset_category_agreement": 0.9714
+    },
+    {
+      "source": "jev",
+      "support_size": 500,
+      "subset_seed": 2026,
+      "method": "majority",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.0328,
+      "teacher_agreement_95ci": [
+        0.029484520412646858,
+        0.03647428766491334
+      ],
+      "teacher_macro_f1": 0.002352468657658433,
+      "teacher_kappa": 0.0,
+      "teacher_category_agreement": 0.0605,
+      "dataset_agreement": 0.04,
+      "dataset_agreement_95ci": [
+        0.036332586849879514,
+        0.044020691651142946
+      ],
+      "dataset_macro_f1": 0.002849002849002849,
+      "dataset_kappa": 0.0,
+      "dataset_category_agreement": 0.0686
+    },
+    {
+      "source": "jev",
+      "support_size": 500,
+      "subset_seed": 2026,
+      "method": "prior_random",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.0393,
+      "teacher_agreement_95ci": [
+        0.03566516949826361,
+        0.043288646600477806
+      ],
+      "teacher_macro_f1": 0.03762611702042534,
+      "teacher_kappa": 0.001174688017844261,
+      "teacher_category_agreement": 0.1107,
+      "dataset_agreement": 0.0399,
+      "dataset_agreement_95ci": [
+        0.03623722186390825,
+        0.04391613343678834
+      ],
+      "dataset_macro_f1": 0.03801584492355774,
+      "dataset_kappa": 0.0022662823574990387,
+      "dataset_category_agreement": 0.1101
+    },
+    {
+      "source": "dataset",
+      "support_size": 500,
+      "subset_seed": 2026,
+      "method": "nearest",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8419,
+      "teacher_agreement_95ci": [
+        0.8346182490347352,
+        0.848919172879396
+      ],
+      "teacher_macro_f1": 0.8343906179189351,
+      "teacher_kappa": 0.8354914458933602,
+      "teacher_category_agreement": 0.9387,
+      "dataset_agreement": 0.9053,
+      "dataset_agreement_95ci": [
+        0.899404580110291,
+        0.9108841508104384
+      ],
+      "dataset_macro_f1": 0.9004786093382001,
+      "dataset_kappa": 0.9014462353882466,
+      "dataset_category_agreement": 0.9811
+    },
+    {
+      "source": "dataset",
+      "support_size": 500,
+      "subset_seed": 2026,
+      "method": "centroid",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8709,
+      "teacher_agreement_95ci": [
+        0.8641853267855276,
+        0.8773298232231045
+      ],
+      "teacher_macro_f1": 0.8656434014389568,
+      "teacher_kappa": 0.8656436951763704,
+      "teacher_category_agreement": 0.9438,
+      "dataset_agreement": 0.935,
+      "dataset_agreement_95ci": [
+        0.929999183396685,
+        0.9396667380208263
+      ],
+      "dataset_macro_f1": 0.9325094151550966,
+      "dataset_kappa": 0.9323445746188028,
+      "dataset_category_agreement": 0.9844
+    },
+    {
+      "source": "dataset",
+      "support_size": 500,
+      "subset_seed": 2026,
+      "method": "weighted_knn",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8516,
+      "teacher_agreement_95ci": [
+        0.8444974213340046,
+        0.8584325510117357
+      ],
+      "teacher_macro_f1": 0.845498831614173,
+      "teacher_kappa": 0.8456512799367611,
+      "teacher_category_agreement": 0.9439,
+      "dataset_agreement": 0.9222,
+      "dataset_agreement_95ci": [
+        0.916786487807745,
+        0.9272892639680557
+      ],
+      "dataset_macro_f1": 0.9166734147310086,
+      "dataset_kappa": 0.9190345092093094,
+      "dataset_category_agreement": 0.9872
+    },
+    {
+      "source": "dataset",
+      "support_size": 500,
+      "subset_seed": 2026,
+      "method": "hybrid",
+      "selected_on_validation": true,
+      "teacher_agreement": 0.8722,
+      "teacher_agreement_95ci": [
+        0.8655130987932521,
+        0.8786010528196161
+      ],
+      "teacher_macro_f1": 0.8672791398153826,
+      "teacher_kappa": 0.8670083089316648,
+      "teacher_category_agreement": 0.9449,
+      "dataset_agreement": 0.9387,
+      "dataset_agreement_95ci": [
+        0.9338278677232641,
+        0.9432352121063041
+      ],
+      "dataset_macro_f1": 0.9360022168559804,
+      "dataset_kappa": 0.9361968154009106,
+      "dataset_category_agreement": 0.9868
+    },
+    {
+      "source": "dataset",
+      "support_size": 500,
+      "subset_seed": 2026,
+      "method": "majority",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.0303,
+      "teacher_agreement_95ci": [
+        0.02711656606925434,
+        0.03384416200015925
+      ],
+      "teacher_macro_f1": 0.00217843777971896,
+      "teacher_kappa": 0.0,
+      "teacher_category_agreement": 0.0303,
+      "dataset_agreement": 0.0347,
+      "dataset_agreement_95ci": [
+        0.031287811116641966,
+        0.03846953776710967
+      ],
+      "dataset_macro_f1": 0.0024841696823913895,
+      "dataset_kappa": 0.0,
+      "dataset_category_agreement": 0.0347
+    },
+    {
+      "source": "dataset",
+      "support_size": 500,
+      "subset_seed": 2026,
+      "method": "prior_random",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.0361,
+      "teacher_agreement_95ci": [
+        0.032618404148997034,
+        0.039937869539316696
+      ],
+      "teacher_macro_f1": 0.03448316336425028,
+      "teacher_kappa": -0.0011327579830262557,
+      "teacher_category_agreement": 0.1103,
+      "dataset_agreement": 0.0382,
+      "dataset_agreement_95ci": [
+        0.03461703284432172,
+        0.04213762805083516
+      ],
+      "dataset_macro_f1": 0.03640151575359937,
+      "dataset_kappa": 0.0008543536727516621,
+      "dataset_category_agreement": 0.1109
+    },
+    {
+      "source": "jev",
+      "support_size": 1000,
+      "subset_seed": 2026,
+      "method": "nearest",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.885,
+      "teacher_agreement_95ci": [
+        0.8785988982262916,
+        0.8911054230282873
+      ],
+      "teacher_macro_f1": 0.8796150565549582,
+      "teacher_kappa": 0.8802232155987952,
+      "teacher_category_agreement": 0.9528,
+      "dataset_agreement": 0.8712,
+      "dataset_agreement_95ci": [
+        0.8644917161363423,
+        0.8776232034732672
+      ],
+      "dataset_macro_f1": 0.8655382715072931,
+      "dataset_kappa": 0.865955094977632,
+      "dataset_category_agreement": 0.9378
+    },
+    {
+      "source": "jev",
+      "support_size": 1000,
+      "subset_seed": 2026,
+      "method": "centroid",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8879,
+      "teacher_agreement_95ci": [
+        0.8815669607313341,
+        0.893935133332695
+      ],
+      "teacher_macro_f1": 0.8834162280897634,
+      "teacher_kappa": 0.8832757116925073,
+      "teacher_category_agreement": 0.9494,
+      "dataset_agreement": 0.9155,
+      "dataset_agreement_95ci": [
+        0.9098877911065302,
+        0.9207931062474375
+      ],
+      "dataset_macro_f1": 0.9136438545697422,
+      "dataset_kappa": 0.9120441495484284,
+      "dataset_category_agreement": 0.9713
+    },
+    {
+      "source": "jev",
+      "support_size": 1000,
+      "subset_seed": 2026,
+      "method": "weighted_knn",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8992,
+      "teacher_agreement_95ci": [
+        0.8931451093345752,
+        0.9049483063662764
+      ],
+      "teacher_macro_f1": 0.8953950467911697,
+      "teacher_kappa": 0.8950239017453714,
+      "teacher_category_agreement": 0.9615,
+      "dataset_agreement": 0.8896,
+      "dataset_agreement_95ci": [
+        0.8833074659081525,
+        0.8955933225614162
+      ],
+      "dataset_macro_f1": 0.884636554119573,
+      "dataset_kappa": 0.8851054241510709,
+      "dataset_category_agreement": 0.9484
+    },
+    {
+      "source": "jev",
+      "support_size": 1000,
+      "subset_seed": 2026,
+      "method": "soft_knn",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8954,
+      "teacher_agreement_95ci": [
+        0.8892491758618841,
+        0.9012471582265846
+      ],
+      "teacher_macro_f1": 0.8899811334906934,
+      "teacher_kappa": 0.8910568086354415,
+      "teacher_category_agreement": 0.9578,
+      "dataset_agreement": 0.8849,
+      "dataset_agreement_95ci": [
+        0.8784965740912987,
+        0.8910078239629544
+      ],
+      "dataset_macro_f1": 0.8793635291968848,
+      "dataset_kappa": 0.8802168476762505,
+      "dataset_category_agreement": 0.9481
+    },
+    {
+      "source": "jev",
+      "support_size": 1000,
+      "subset_seed": 2026,
+      "method": "filtered_centroid",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8915,
+      "teacher_agreement_95ci": [
+        0.8852532805357817,
+        0.8974460487399784
+      ],
+      "teacher_macro_f1": 0.8868355507519894,
+      "teacher_kappa": 0.8870333553540203,
+      "teacher_category_agreement": 0.9495,
+      "dataset_agreement": 0.9262,
+      "dataset_agreement_95ci": [
+        0.920910479937288,
+        0.9311621998515471
+      ],
+      "dataset_macro_f1": 0.9239236691416076,
+      "dataset_kappa": 0.9231857336797553,
+      "dataset_category_agreement": 0.977
+    },
+    {
+      "source": "jev",
+      "support_size": 1000,
+      "subset_seed": 2026,
+      "method": "hybrid",
+      "selected_on_validation": true,
+      "teacher_agreement": 0.9058,
+      "teacher_agreement_95ci": [
+        0.8999179648441304,
+        0.9113703820782284
+      ],
+      "teacher_macro_f1": 0.9024429881073011,
+      "teacher_kappa": 0.9019150605457402,
+      "teacher_category_agreement": 0.962,
+      "dataset_agreement": 0.9091,
+      "dataset_agreement_95ci": [
+        0.9033075513745924,
+        0.9145782611585199
+      ],
+      "dataset_macro_f1": 0.905330391260852,
+      "dataset_kappa": 0.9053872430924075,
+      "dataset_category_agreement": 0.9605
+    },
+    {
+      "source": "jev",
+      "support_size": 1000,
+      "subset_seed": 2026,
+      "method": "majority",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.0457,
+      "teacher_agreement_95ci": [
+        0.04177845464123728,
+        0.04997044627835946
+      ],
+      "teacher_macro_f1": 0.003237243172214962,
+      "teacher_kappa": 0.0,
+      "teacher_category_agreement": 0.0829,
+      "dataset_agreement": 0.043,
+      "dataset_agreement_95ci": [
+        0.03919645311021771,
+        0.04715452140058068
+      ],
+      "dataset_macro_f1": 0.003053868825680906,
+      "dataset_kappa": 0.0,
+      "dataset_category_agreement": 0.0802
+    },
+    {
+      "source": "jev",
+      "support_size": 1000,
+      "subset_seed": 2026,
+      "method": "prior_random",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.0383,
+      "teacher_agreement_95ci": [
+        0.034712283854238454,
+        0.0422423002412443
+      ],
+      "teacher_macro_f1": 0.03666519067102372,
+      "teacher_kappa": -0.00017145499227422256,
+      "teacher_category_agreement": 0.119,
+      "dataset_agreement": 0.0378,
+      "dataset_agreement_95ci": [
+        0.03423609837226937,
+        0.04171886972158407
+      ],
+      "dataset_macro_f1": 0.03637570659039525,
+      "dataset_kappa": -2.4080812671467555e-05,
+      "dataset_category_agreement": 0.1164
+    },
+    {
+      "source": "dataset",
+      "support_size": 1000,
+      "subset_seed": 2026,
+      "method": "nearest",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8707,
+      "teacher_agreement_95ci": [
+        0.8639810737106943,
+        0.877134229897286
+      ],
+      "teacher_macro_f1": 0.8644489851918565,
+      "teacher_kappa": 0.865431396967804,
+      "teacher_category_agreement": 0.9434,
+      "dataset_agreement": 0.9398,
+      "dataset_agreement_95ci": [
+        0.9349670422864078,
+        0.9442951927467449
+      ],
+      "dataset_macro_f1": 0.9368306742148556,
+      "dataset_kappa": 0.9373476282871837,
+      "dataset_category_agreement": 0.9858
+    },
+    {
+      "source": "dataset",
+      "support_size": 1000,
+      "subset_seed": 2026,
+      "method": "centroid",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8833,
+      "teacher_agreement_95ci": [
+        0.8768595915012487,
+        0.8894460353477904
+      ],
+      "teacher_macro_f1": 0.8784850346156168,
+      "teacher_kappa": 0.8785449409164848,
+      "teacher_category_agreement": 0.9462,
+      "dataset_agreement": 0.9477,
+      "dataset_agreement_95ci": [
+        0.9431620418982289,
+        0.9518941259606672
+      ],
+      "dataset_macro_f1": 0.9450508977479554,
+      "dataset_kappa": 0.9455644107236612,
+      "dataset_category_agreement": 0.989
+    },
+    {
+      "source": "dataset",
+      "support_size": 1000,
+      "subset_seed": 2026,
+      "method": "weighted_knn",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8762,
+      "teacher_agreement_95ci": [
+        0.869599957806104,
+        0.8825111218197987
+      ],
+      "teacher_macro_f1": 0.8702576694860985,
+      "teacher_kappa": 0.8711633086340491,
+      "teacher_category_agreement": 0.9453,
+      "dataset_agreement": 0.9439,
+      "dataset_agreement_95ci": [
+        0.9392170226934293,
+        0.9482420635530839
+      ],
+      "dataset_macro_f1": 0.9411047050108138,
+      "dataset_kappa": 0.9416169847326854,
+      "dataset_category_agreement": 0.988
+    },
+    {
+      "source": "dataset",
+      "support_size": 1000,
+      "subset_seed": 2026,
+      "method": "hybrid",
+      "selected_on_validation": true,
+      "teacher_agreement": 0.8894,
+      "teacher_agreement_95ci": [
+        0.8831026769260942,
+        0.8953982651428226
+      ],
+      "teacher_macro_f1": 0.8843809931257726,
+      "teacher_kappa": 0.8848969475919359,
+      "teacher_category_agreement": 0.9499,
+      "dataset_agreement": 0.9568,
+      "dataset_agreement_95ci": [
+        0.952636749863205,
+        0.9606124292253447
+      ],
+      "dataset_macro_f1": 0.9547647454531833,
+      "dataset_kappa": 0.9550383705355951,
+      "dataset_category_agreement": 0.9934
+    },
+    {
+      "source": "dataset",
+      "support_size": 1000,
+      "subset_seed": 2026,
+      "method": "majority",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.0304,
+      "teacher_agreement_95ci": [
+        0.027211172645034566,
+        0.03394947862470489
+      ],
+      "teacher_macro_f1": 0.0021854152288934897,
+      "teacher_kappa": 0.0,
+      "teacher_category_agreement": 0.1138,
+      "dataset_agreement": 0.0278,
+      "dataset_agreement_95ci": [
+        0.024754675024605585,
+        0.031207973036661382
+      ],
+      "dataset_macro_f1": 0.0020035602833812604,
+      "dataset_kappa": 0.0,
+      "dataset_category_agreement": 0.1006
+    },
+    {
+      "source": "dataset",
+      "support_size": 1000,
+      "subset_seed": 2026,
+      "method": "prior_random",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.039,
+      "teacher_agreement_95ci": [
+        0.035379232816902695,
+        0.04297481368086112
+      ],
+      "teacher_macro_f1": 0.03741716733121356,
+      "teacher_kappa": 0.0013230858343479257,
+      "teacher_category_agreement": 0.1206,
+      "dataset_agreement": 0.0384,
+      "dataset_agreement_95ci": [
+        0.0348075417687003,
+        0.04234696552710831
+      ],
+      "dataset_macro_f1": 0.036749135321160434,
+      "dataset_kappa": 0.0007620747891138313,
+      "dataset_category_agreement": 0.1183
+    },
+    {
+      "source": "jev",
+      "support_size": 2000,
+      "subset_seed": 2026,
+      "method": "nearest",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.9068,
+      "teacher_agreement_95ci": [
+        0.9009448818594445,
+        0.912342697066173
+      ],
+      "teacher_macro_f1": 0.9045811722202275,
+      "teacher_kappa": 0.9029391372674399,
+      "teacher_category_agreement": 0.9674,
+      "dataset_agreement": 0.8837,
+      "dataset_agreement_95ci": [
+        0.8772688013994484,
+        0.8898365182508944
+      ],
+      "dataset_macro_f1": 0.8797582712485619,
+      "dataset_kappa": 0.8789605351397236,
+      "dataset_category_agreement": 0.9436
+    },
+    {
+      "source": "jev",
+      "support_size": 2000,
+      "subset_seed": 2026,
+      "method": "centroid",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8899,
+      "teacher_agreement_95ci": [
+        0.8836146613084712,
+        0.8958858967620751
+      ],
+      "teacher_macro_f1": 0.8855343008596619,
+      "teacher_kappa": 0.8853757021662212,
+      "teacher_category_agreement": 0.9501,
+      "dataset_agreement": 0.9262,
+      "dataset_agreement_95ci": [
+        0.920910479937288,
+        0.9311621998515471
+      ],
+      "dataset_macro_f1": 0.9243901283954197,
+      "dataset_kappa": 0.9231848270173827,
+      "dataset_category_agreement": 0.9787
+    },
+    {
+      "source": "jev",
+      "support_size": 2000,
+      "subset_seed": 2026,
+      "method": "weighted_knn",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.9147,
+      "teacher_agreement_95ci": [
+        0.9090647707583752,
+        0.9200167409929856
+      ],
+      "teacher_macro_f1": 0.9119821514279925,
+      "teacher_kappa": 0.9111603576894381,
+      "teacher_category_agreement": 0.9713,
+      "dataset_agreement": 0.8939,
+      "dataset_agreement_95ci": [
+        0.8877119926330168,
+        0.8997854934505642
+      ],
+      "dataset_macro_f1": 0.8897277051589398,
+      "dataset_kappa": 0.8895732203756538,
+      "dataset_category_agreement": 0.9482
+    },
+    {
+      "source": "jev",
+      "support_size": 2000,
+      "subset_seed": 2026,
+      "method": "soft_knn",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.9146,
+      "teacher_agreement_95ci": [
+        0.9089619033511235,
+        0.9199196851999113
+      ],
+      "teacher_macro_f1": 0.9110311731487527,
+      "teacher_kappa": 0.911065130649697,
+      "teacher_category_agreement": 0.9713,
+      "dataset_agreement": 0.906,
+      "dataset_agreement_95ci": [
+        0.9001233324563265,
+        0.9115648608666842
+      ],
+      "dataset_macro_f1": 0.9005634530054598,
+      "dataset_kappa": 0.9021704953457509,
+      "dataset_category_agreement": 0.9589
+    },
+    {
+      "source": "jev",
+      "support_size": 2000,
+      "subset_seed": 2026,
+      "method": "filtered_centroid",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8898,
+      "teacher_agreement_95ci": [
+        0.8835122612488766,
+        0.8957883736213439
+      ],
+      "teacher_macro_f1": 0.8848485506169298,
+      "teacher_kappa": 0.8852631524477779,
+      "teacher_category_agreement": 0.9482,
+      "dataset_agreement": 0.9309,
+      "dataset_agreement_95ci": [
+        0.9257617947322282,
+        0.9357072754719226
+      ],
+      "dataset_macro_f1": 0.9287971903560148,
+      "dataset_kappa": 0.9280792966242639,
+      "dataset_category_agreement": 0.9824
+    },
+    {
+      "source": "jev",
+      "support_size": 2000,
+      "subset_seed": 2026,
+      "method": "hybrid",
+      "selected_on_validation": true,
+      "teacher_agreement": 0.9141,
+      "teacher_agreement_95ci": [
+        0.908447599852065,
+        0.9194343726973405
+      ],
+      "teacher_macro_f1": 0.9109219686674244,
+      "teacher_kappa": 0.9105480928702404,
+      "teacher_category_agreement": 0.969,
+      "dataset_agreement": 0.9155,
+      "dataset_agreement_95ci": [
+        0.9098877911065302,
+        0.9207931062474375
+      ],
+      "dataset_macro_f1": 0.9104917426659972,
+      "dataset_kappa": 0.912051947344741,
+      "dataset_category_agreement": 0.9649
+    },
+    {
+      "source": "jev",
+      "support_size": 2000,
+      "subset_seed": 2026,
+      "method": "majority",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.0542,
+      "teacher_agreement_95ci": [
+        0.049931145085800314,
+        0.05881122786149492
+      ],
+      "teacher_macro_f1": 0.003808399558731564,
+      "teacher_kappa": 0.0,
+      "teacher_category_agreement": 0.1138,
+      "dataset_agreement": 0.0462,
+      "dataset_agreement_95ci": [
+        0.04225704225860869,
+        0.050491474662617365
+      ],
+      "dataset_macro_f1": 0.003271097516939612,
+      "dataset_kappa": 0.0,
+      "dataset_category_agreement": 0.1006
+    },
+    {
+      "source": "jev",
+      "support_size": 2000,
+      "subset_seed": 2026,
+      "method": "prior_random",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.038,
+      "teacher_agreement_95ci": [
+        0.0344265516422164,
+        0.04192826285228877
+      ],
+      "teacher_macro_f1": 0.03574421063861943,
+      "teacher_kappa": -0.0008960724973370304,
+      "teacher_category_agreement": 0.1179,
+      "dataset_agreement": 0.0363,
+      "dataset_agreement_95ci": [
+        0.032808611118288936,
+        0.040147508970676524
+      ],
+      "dataset_macro_f1": 0.03438280060935784,
+      "dataset_kappa": -0.0019482523514748884,
+      "dataset_category_agreement": 0.1167
+    },
+    {
+      "source": "dataset",
+      "support_size": 2000,
+      "subset_seed": 2026,
+      "method": "nearest",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8842,
+      "teacher_agreement_95ci": [
+        0.8777803471993272,
+        0.8903245884526448
+      ],
+      "teacher_macro_f1": 0.8788321951323288,
+      "teacher_kappa": 0.8794848846778581,
+      "teacher_category_agreement": 0.9489,
+      "dataset_agreement": 0.9598,
+      "dataset_agreement_95ci": [
+        0.955770211358904,
+        0.9634766637394218
+      ],
+      "dataset_macro_f1": 0.9580183115332778,
+      "dataset_kappa": 0.9581601990400513,
+      "dataset_category_agreement": 0.993
+    },
+    {
+      "source": "dataset",
+      "support_size": 2000,
+      "subset_seed": 2026,
+      "method": "centroid",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8836,
+      "teacher_agreement_95ci": [
+        0.8771664967014087,
+        0.8897388997486083
+      ],
+      "teacher_macro_f1": 0.8791324833127121,
+      "teacher_kappa": 0.8788722141506787,
+      "teacher_category_agreement": 0.9459,
+      "dataset_agreement": 0.9514,
+      "dataset_agreement_95ci": [
+        0.9470093917792698,
+        0.9554439344916833
+      ],
+      "dataset_macro_f1": 0.949201799109914,
+      "dataset_kappa": 0.9494152959859872,
+      "dataset_category_agreement": 0.9893
+    },
+    {
+      "source": "dataset",
+      "support_size": 2000,
+      "subset_seed": 2026,
+      "method": "weighted_knn",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8838,
+      "teacher_agreement_95ci": [
+        0.8773711075825785,
+        0.8899341352680901
+      ],
+      "teacher_macro_f1": 0.8782216081800568,
+      "teacher_kappa": 0.8790721692506752,
+      "teacher_category_agreement": 0.9495,
+      "dataset_agreement": 0.9595,
+      "dataset_agreement_95ci": [
+        0.9554566141252407,
+        0.9631904913721074
+      ],
+      "dataset_macro_f1": 0.9575752505961549,
+      "dataset_kappa": 0.9578476840112519,
+      "dataset_category_agreement": 0.9936
+    },
+    {
+      "source": "dataset",
+      "support_size": 2000,
+      "subset_seed": 2026,
+      "method": "hybrid",
+      "selected_on_validation": true,
+      "teacher_agreement": 0.889,
+      "teacher_agreement_95ci": [
+        0.8826931179776982,
+        0.8950081312899154
+      ],
+      "teacher_macro_f1": 0.8835605332871929,
+      "teacher_kappa": 0.8844867410291076,
+      "teacher_category_agreement": 0.9499,
+      "dataset_agreement": 0.966,
+      "dataset_agreement_95ci": [
+        0.9622652076103402,
+        0.9693769059081891
+      ],
+      "dataset_macro_f1": 0.9642705064099362,
+      "dataset_kappa": 0.964611977357286,
+      "dataset_category_agreement": 0.9946
+    },
+    {
+      "source": "dataset",
+      "support_size": 2000,
+      "subset_seed": 2026,
+      "method": "majority",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.0372,
+      "teacher_agreement_95ci": [
+        0.03366490829585304,
+        0.0410905205960452
+      ],
+      "teacher_macro_f1": 0.0026567253717273,
+      "teacher_kappa": 0.0,
+      "teacher_category_agreement": 0.0829,
+      "dataset_agreement": 0.0372,
+      "dataset_agreement_95ci": [
+        0.03366490829585304,
+        0.0410905205960452
+      ],
+      "dataset_macro_f1": 0.0026567253717273,
+      "dataset_kappa": 0.0,
+      "dataset_category_agreement": 0.0802
+    },
+    {
+      "source": "dataset",
+      "support_size": 2000,
+      "subset_seed": 2026,
+      "method": "prior_random",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.0357,
+      "teacher_agreement_95ci": [
+        0.03223808066494071,
+        0.039518500222069576
+      ],
+      "teacher_macro_f1": 0.03399518052987739,
+      "teacher_kappa": -0.002460712023008238,
+      "teacher_category_agreement": 0.12,
+      "dataset_agreement": 0.0368,
+      "dataset_agreement_95ci": [
+        0.033284258546591346,
+        0.040671477544003444
+      ],
+      "dataset_macro_f1": 0.035046583890544214,
+      "dataset_kappa": -0.0013751234175087834,
+      "dataset_category_agreement": 0.1197
+    },
+    {
+      "source": "jev",
+      "support_size": 500,
+      "subset_seed": 31415,
+      "method": "nearest",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8603,
+      "teacher_agreement_95ci": [
+        0.8533668262120805,
+        0.8669564645620099
+      ],
+      "teacher_macro_f1": 0.8539034893467945,
+      "teacher_kappa": 0.8545032312259854,
+      "teacher_category_agreement": 0.9455,
+      "dataset_agreement": 0.851,
+      "dataset_agreement_95ci": [
+        0.843886049288046,
+        0.857844383855739
+      ],
+      "dataset_macro_f1": 0.8438883045527015,
+      "dataset_kappa": 0.8449046019656687,
+      "dataset_category_agreement": 0.9346
+    },
+    {
+      "source": "jev",
+      "support_size": 500,
+      "subset_seed": 31415,
+      "method": "centroid",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8889,
+      "teacher_agreement_95ci": [
+        0.8825907321912747,
+        0.8949105938760131
+      ],
+      "teacher_macro_f1": 0.8843486202513409,
+      "teacher_kappa": 0.8843281571658629,
+      "teacher_category_agreement": 0.9523,
+      "dataset_agreement": 0.9061,
+      "dataset_agreement_95ci": [
+        0.9002260192133255,
+        0.911662097310011
+      ],
+      "dataset_macro_f1": 0.9008371540706873,
+      "dataset_kappa": 0.9022749344125872,
+      "dataset_category_agreement": 0.9707
+    },
+    {
+      "source": "jev",
+      "support_size": 500,
+      "subset_seed": 31415,
+      "method": "weighted_knn",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.885,
+      "teacher_agreement_95ci": [
+        0.8785988982262916,
+        0.8911054230282873
+      ],
+      "teacher_macro_f1": 0.877253293769746,
+      "teacher_kappa": 0.8802098369494424,
+      "teacher_category_agreement": 0.9579,
+      "dataset_agreement": 0.8759,
+      "dataset_agreement_95ci": [
+        0.8692933684721356,
+        0.8822179415527898
+      ],
+      "dataset_macro_f1": 0.8657538834991724,
+      "dataset_kappa": 0.8708390678202614,
+      "dataset_category_agreement": 0.953
+    },
+    {
+      "source": "jev",
+      "support_size": 500,
+      "subset_seed": 31415,
+      "method": "soft_knn",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8842,
+      "teacher_agreement_95ci": [
+        0.8777803471993272,
+        0.8903245884526448
+      ],
+      "teacher_macro_f1": 0.8781675890127878,
+      "teacher_kappa": 0.8793920208010645,
+      "teacher_category_agreement": 0.9568,
+      "dataset_agreement": 0.8766,
+      "dataset_agreement_95ci": [
+        0.87000876276723,
+        0.8829020096599763
+      ],
+      "dataset_macro_f1": 0.8698369748225526,
+      "dataset_kappa": 0.8715707156461682,
+      "dataset_category_agreement": 0.9522
+    },
+    {
+      "source": "jev",
+      "support_size": 500,
+      "subset_seed": 31415,
+      "method": "filtered_centroid",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8835,
+      "teacher_agreement_95ci": [
+        0.8770641934867991,
+        0.8896412797628919
+      ],
+      "teacher_macro_f1": 0.8771336069638342,
+      "teacher_kappa": 0.8786821579172169,
+      "teacher_category_agreement": 0.9449,
+      "dataset_agreement": 0.9165,
+      "dataset_agreement_95ci": [
+        0.9109167713416663,
+        0.9217633580155601
+      ],
+      "dataset_macro_f1": 0.9121623347881272,
+      "dataset_kappa": 0.9130937069758558,
+      "dataset_category_agreement": 0.9796
+    },
+    {
+      "source": "jev",
+      "support_size": 500,
+      "subset_seed": 31415,
+      "method": "hybrid",
+      "selected_on_validation": true,
+      "teacher_agreement": 0.8947,
+      "teacher_agreement_95ci": [
+        0.8885317763353614,
+        0.9005650953508265
+      ],
+      "teacher_macro_f1": 0.8901737105353122,
+      "teacher_kappa": 0.8903522358928467,
+      "teacher_category_agreement": 0.9587,
+      "dataset_agreement": 0.9034,
+      "dataset_agreement_95ci": [
+        0.8974541595272557,
+        0.9090360305872823
+      ],
+      "dataset_macro_f1": 0.8976264275060328,
+      "dataset_kappa": 0.8994470723583134,
+      "dataset_category_agreement": 0.9638
+    },
+    {
+      "source": "jev",
+      "support_size": 500,
+      "subset_seed": 31415,
+      "method": "majority",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.0372,
+      "teacher_agreement_95ci": [
+        0.03366490829585304,
+        0.0410905205960452
+      ],
+      "teacher_macro_f1": 0.0026567253717273,
+      "teacher_kappa": 0.0,
+      "teacher_category_agreement": 0.0829,
+      "dataset_agreement": 0.0372,
+      "dataset_agreement_95ci": [
+        0.03366490829585304,
+        0.0410905205960452
+      ],
+      "dataset_macro_f1": 0.0026567253717273,
+      "dataset_kappa": 0.0,
+      "dataset_category_agreement": 0.0802
+    },
+    {
+      "source": "jev",
+      "support_size": 500,
+      "subset_seed": 31415,
+      "method": "prior_random",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.0387,
+      "teacher_agreement_95ci": [
+        0.03509335668205077,
+        0.04266092021473544
+      ],
+      "teacher_macro_f1": 0.03465908845586434,
+      "teacher_kappa": -0.0005968503484430343,
+      "teacher_category_agreement": 0.1173,
+      "dataset_agreement": 0.0384,
+      "dataset_agreement_95ci": [
+        0.0348075417687003,
+        0.04234696552710831
+      ],
+      "dataset_macro_f1": 0.034998903931390775,
+      "dataset_kappa": -0.000295438755783195,
+      "dataset_category_agreement": 0.1165
+    },
+    {
+      "source": "dataset",
+      "support_size": 500,
+      "subset_seed": 31415,
+      "method": "nearest",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8502,
+      "teacher_agreement_95ci": [
+        0.8430709472297458,
+        0.8570601003114321
+      ],
+      "teacher_macro_f1": 0.8419216784247675,
+      "teacher_kappa": 0.8441062196945691,
+      "teacher_category_agreement": 0.9374,
+      "dataset_agreement": 0.9158,
+      "dataset_agreement_95ci": [
+        0.9101964611423878,
+        0.9210842058125575
+      ],
+      "dataset_macro_f1": 0.9103307706397866,
+      "dataset_kappa": 0.9123590817042869,
+      "dataset_category_agreement": 0.9801
+    },
+    {
+      "source": "dataset",
+      "support_size": 500,
+      "subset_seed": 31415,
+      "method": "centroid",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8747,
+      "teacher_agreement_95ci": [
+        0.868067133646386,
+        0.881045097974629
+      ],
+      "teacher_macro_f1": 0.8696441256515974,
+      "teacher_kappa": 0.8696382148342452,
+      "teacher_category_agreement": 0.9447,
+      "dataset_agreement": 0.9459,
+      "dataset_agreement_95ci": [
+        0.9412925898802001,
+        0.9501649603728303
+      ],
+      "dataset_macro_f1": 0.9426090836581551,
+      "dataset_kappa": 0.9436944777854316,
+      "dataset_category_agreement": 0.9881
+    },
+    {
+      "source": "dataset",
+      "support_size": 500,
+      "subset_seed": 31415,
+      "method": "weighted_knn",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8625,
+      "teacher_agreement_95ci": [
+        0.8556110462804347,
+        0.8691105549008249
+      ],
+      "teacher_macro_f1": 0.8553567854915015,
+      "teacher_kappa": 0.8569172680763413,
+      "teacher_category_agreement": 0.9393,
+      "dataset_agreement": 0.9303,
+      "dataset_agreement_95ci": [
+        0.9251421218896245,
+        0.9351274091125712
+      ],
+      "dataset_macro_f1": 0.9258189993001756,
+      "dataset_kappa": 0.9274526545302695,
+      "dataset_category_agreement": 0.9821
+    },
+    {
+      "source": "dataset",
+      "support_size": 500,
+      "subset_seed": 31415,
+      "method": "hybrid",
+      "selected_on_validation": true,
+      "teacher_agreement": 0.8816,
+      "teacher_agreement_95ci": [
+        0.8751207120786423,
+        0.8877862203648573
+      ],
+      "teacher_macro_f1": 0.8763511132479934,
+      "teacher_kappa": 0.8768144457036052,
+      "teacher_category_agreement": 0.9475,
+      "dataset_agreement": 0.9536,
+      "dataset_agreement_95ci": [
+        0.9493001510574847,
+        0.9575514856206374
+      ],
+      "dataset_macro_f1": 0.950513824882387,
+      "dataset_kappa": 0.9517070878341495,
+      "dataset_category_agreement": 0.9912
+    },
+    {
+      "source": "dataset",
+      "support_size": 500,
+      "subset_seed": 31415,
+      "method": "majority",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.0372,
+      "teacher_agreement_95ci": [
+        0.03366490829585304,
+        0.0410905205960452
+      ],
+      "teacher_macro_f1": 0.0026567253717273,
+      "teacher_kappa": 0.0,
+      "teacher_category_agreement": 0.0829,
+      "dataset_agreement": 0.0372,
+      "dataset_agreement_95ci": [
+        0.03366490829585304,
+        0.0410905205960452
+      ],
+      "dataset_macro_f1": 0.0026567253717273,
+      "dataset_kappa": 0.0,
+      "dataset_category_agreement": 0.0802
+    },
+    {
+      "source": "dataset",
+      "support_size": 500,
+      "subset_seed": 31415,
+      "method": "prior_random",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.0373,
+      "teacher_agreement_95ci": [
+        0.03376008880295818,
+        0.041195263289265927
+      ],
+      "teacher_macro_f1": 0.03414836348361658,
+      "teacher_kappa": -0.0013538091308551436,
+      "teacher_category_agreement": 0.1117,
+      "dataset_agreement": 0.0382,
+      "dataset_agreement_95ci": [
+        0.03461703284432172,
+        0.04213762805083516
+      ],
+      "dataset_macro_f1": 0.03510347032954425,
+      "dataset_kappa": -0.0007263121329250666,
+      "dataset_category_agreement": 0.1122
+    },
+    {
+      "source": "jev",
+      "support_size": 1000,
+      "subset_seed": 31415,
+      "method": "nearest",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8901,
+      "teacher_agreement_95ci": [
+        0.8838194662156287,
+        0.8960809382555694
+      ],
+      "teacher_macro_f1": 0.8867657541546546,
+      "teacher_kappa": 0.8855450906206899,
+      "teacher_category_agreement": 0.9604,
+      "dataset_agreement": 0.8679,
+      "dataset_agreement_95ci": [
+        0.8611220701739299,
+        0.8743953838249261
+      ],
+      "dataset_macro_f1": 0.8624250652352885,
+      "dataset_kappa": 0.8625186743299167,
+      "dataset_category_agreement": 0.9386
+    },
+    {
+      "source": "jev",
+      "support_size": 1000,
+      "subset_seed": 31415,
+      "method": "centroid",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8916,
+      "teacher_agreement_95ci": [
+        0.8853557079784098,
+        0.897543544497676
+      ],
+      "teacher_macro_f1": 0.8876398185945126,
+      "teacher_kappa": 0.88714069525059,
+      "teacher_category_agreement": 0.9538,
+      "dataset_agreement": 0.9205,
+      "dataset_agreement_95ci": [
+        0.9150350413652582,
+        0.9256420160050027
+      ],
+      "dataset_macro_f1": 0.9172987947466261,
+      "dataset_kappa": 0.9172522656173546,
+      "dataset_category_agreement": 0.9766
+    },
+    {
+      "source": "jev",
+      "support_size": 1000,
+      "subset_seed": 31415,
+      "method": "weighted_knn",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.9041,
+      "teacher_agreement_95ci": [
+        0.89817265486607,
+        0.9097169976507491
+      ],
+      "teacher_macro_f1": 0.9010106534705129,
+      "teacher_kappa": 0.9001210285259446,
+      "teacher_category_agreement": 0.9682,
+      "dataset_agreement": 0.8815,
+      "dataset_agreement_95ci": [
+        0.8750184381893826,
+        0.887688571053791
+      ],
+      "dataset_macro_f1": 0.876218483535872,
+      "dataset_kappa": 0.8766742690822164,
+      "dataset_category_agreement": 0.9463
+    },
+    {
+      "source": "jev",
+      "support_size": 1000,
+      "subset_seed": 31415,
+      "method": "soft_knn",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.9081,
+      "teacher_agreement_95ci": [
+        0.9022801720667188,
+        0.913606408463135
+      ],
+      "teacher_macro_f1": 0.9041217544912737,
+      "teacher_kappa": 0.9042914296182867,
+      "teacher_category_agreement": 0.9692,
+      "dataset_agreement": 0.8919,
+      "dataset_agreement_95ci": [
+        0.8856630000841917,
+        0.8978360219928719
+      ],
+      "dataset_macro_f1": 0.8860870020211224,
+      "dataset_kappa": 0.8875016204813988,
+      "dataset_category_agreement": 0.9536
+    },
+    {
+      "source": "jev",
+      "support_size": 1000,
+      "subset_seed": 31415,
+      "method": "filtered_centroid",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8911,
+      "teacher_agreement_95ci": [
+        0.8848435870091271,
+        0.8970560494653297
+      ],
+      "teacher_macro_f1": 0.8870481696128898,
+      "teacher_kappa": 0.8866220482261082,
+      "teacher_category_agreement": 0.9535,
+      "dataset_agreement": 0.9214,
+      "dataset_agreement_95ci": [
+        0.9159621874388979,
+        0.9265141787342959
+      ],
+      "dataset_macro_f1": 0.9182453073499778,
+      "dataset_kappa": 0.9181883069107586,
+      "dataset_category_agreement": 0.9762
+    },
+    {
+      "source": "jev",
+      "support_size": 1000,
+      "subset_seed": 31415,
+      "method": "hybrid",
+      "selected_on_validation": true,
+      "teacher_agreement": 0.9135,
+      "teacher_agreement_95ci": [
+        0.9078305089696972,
+        0.9188519243777531
+      ],
+      "teacher_macro_f1": 0.9100230212189765,
+      "teacher_kappa": 0.909927405654164,
+      "teacher_category_agreement": 0.9669,
+      "dataset_agreement": 0.9111,
+      "dataset_agreement_95ci": [
+        0.9053629308246761,
+        0.9165213457149536
+      ],
+      "dataset_macro_f1": 0.9057009515678849,
+      "dataset_kappa": 0.9074641748958321,
+      "dataset_category_agreement": 0.9642
+    },
+    {
+      "source": "jev",
+      "support_size": 1000,
+      "subset_seed": 31415,
+      "method": "majority",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.0542,
+      "teacher_agreement_95ci": [
+        0.049931145085800314,
+        0.05881122786149492
+      ],
+      "teacher_macro_f1": 0.003808399558731564,
+      "teacher_kappa": 0.0,
+      "teacher_category_agreement": 0.1138,
+      "dataset_agreement": 0.0462,
+      "dataset_agreement_95ci": [
+        0.04225704225860869,
+        0.050491474662617365
+      ],
+      "dataset_macro_f1": 0.003271097516939612,
+      "dataset_kappa": 0.0,
+      "dataset_category_agreement": 0.1006
+    },
+    {
+      "source": "jev",
+      "support_size": 1000,
+      "subset_seed": 31415,
+      "method": "prior_random",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.0384,
+      "teacher_agreement_95ci": [
+        0.0348075417687003,
+        0.04234696552710831
+      ],
+      "teacher_macro_f1": 0.03630041592389451,
+      "teacher_kappa": -0.0004865719116264877,
+      "teacher_category_agreement": 0.1196,
+      "dataset_agreement": 0.0373,
+      "dataset_agreement_95ci": [
+        0.03376008880295818,
+        0.041195263289265927
+      ],
+      "dataset_macro_f1": 0.035927054064944994,
+      "dataset_kappa": -0.0008634747678075705,
+      "dataset_category_agreement": 0.118
+    },
+    {
+      "source": "dataset",
+      "support_size": 1000,
+      "subset_seed": 31415,
+      "method": "nearest",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8704,
+      "teacher_agreement_95ci": [
+        0.8636747038113881,
+        0.8768408301956145
+      ],
+      "teacher_macro_f1": 0.8635917813998161,
+      "teacher_kappa": 0.8651282728469194,
+      "teacher_category_agreement": 0.9436,
+      "dataset_agreement": 0.9453,
+      "dataset_agreement_95ci": [
+        0.9406697463604533,
+        0.9495882646906221
+      ],
+      "dataset_macro_f1": 0.9421609486659575,
+      "dataset_kappa": 0.9430667731099436,
+      "dataset_category_agreement": 0.9873
+    },
+    {
+      "source": "dataset",
+      "support_size": 1000,
+      "subset_seed": 31415,
+      "method": "centroid",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8815,
+      "teacher_agreement_95ci": [
+        0.8750184381893826,
+        0.887688571053791
+      ],
+      "teacher_macro_f1": 0.8768311809622978,
+      "teacher_kappa": 0.876698981383752,
+      "teacher_category_agreement": 0.9461,
+      "dataset_agreement": 0.9519,
+      "dataset_agreement_95ci": [
+        0.9475298044321433,
+        0.955923137840439
+      ],
+      "dataset_macro_f1": 0.9492843310371002,
+      "dataset_kappa": 0.9499379402189273,
+      "dataset_category_agreement": 0.9897
+    },
+    {
+      "source": "dataset",
+      "support_size": 1000,
+      "subset_seed": 31415,
+      "method": "weighted_knn",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8805,
+      "teacher_agreement_95ci": [
+        0.8739957787515786,
+        0.8867119984883363
+      ],
+      "teacher_macro_f1": 0.8748545521285175,
+      "teacher_kappa": 0.8756466193685375,
+      "teacher_category_agreement": 0.9481,
+      "dataset_agreement": 0.9534,
+      "dataset_agreement_95ci": [
+        0.9490917977675526,
+        0.9573599925099179
+      ],
+      "dataset_macro_f1": 0.9500846128786371,
+      "dataset_kappa": 0.9514966666292309,
+      "dataset_category_agreement": 0.9913
+    },
+    {
+      "source": "dataset",
+      "support_size": 1000,
+      "subset_seed": 31415,
+      "method": "hybrid",
+      "selected_on_validation": true,
+      "teacher_agreement": 0.8828,
+      "teacher_agreement_95ci": [
+        0.8763481123818776,
+        0.8889578984655323
+      ],
+      "teacher_macro_f1": 0.877641849604466,
+      "teacher_kappa": 0.8780463694341747,
+      "teacher_category_agreement": 0.9485,
+      "dataset_agreement": 0.9567,
+      "dataset_agreement_95ci": [
+        0.9525323942206076,
+        0.9605168616676163
+      ],
+      "dataset_macro_f1": 0.9539242535692364,
+      "dataset_kappa": 0.9549318667142744,
+      "dataset_category_agreement": 0.992
+    },
+    {
+      "source": "dataset",
+      "support_size": 1000,
+      "subset_seed": 31415,
+      "method": "majority",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.0372,
+      "teacher_agreement_95ci": [
+        0.03366490829585304,
+        0.0410905205960452
+      ],
+      "teacher_macro_f1": 0.0026567253717273,
+      "teacher_kappa": 0.0,
+      "teacher_category_agreement": 0.0829,
+      "dataset_agreement": 0.0372,
+      "dataset_agreement_95ci": [
+        0.03366490829585304,
+        0.0410905205960452
+      ],
+      "dataset_macro_f1": 0.0026567253717273,
+      "dataset_kappa": 0.0,
+      "dataset_category_agreement": 0.0802
+    },
+    {
+      "source": "dataset",
+      "support_size": 1000,
+      "subset_seed": 31415,
+      "method": "prior_random",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.036,
+      "teacher_agreement_95ci": [
+        0.032523311925956866,
+        0.03983303856203099
+      ],
+      "teacher_macro_f1": 0.03456342026927472,
+      "teacher_kappa": -0.0022534483548779516,
+      "teacher_category_agreement": 0.1179,
+      "dataset_agreement": 0.0368,
+      "dataset_agreement_95ci": [
+        0.033284258546591346,
+        0.040671477544003444
+      ],
+      "dataset_macro_f1": 0.03556938569457357,
+      "dataset_kappa": -0.0014214216414303316,
+      "dataset_category_agreement": 0.1178
+    },
+    {
+      "source": "jev",
+      "support_size": 2000,
+      "subset_seed": 31415,
+      "method": "nearest",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.9068,
+      "teacher_agreement_95ci": [
+        0.9009448818594445,
+        0.912342697066173
+      ],
+      "teacher_macro_f1": 0.9045811722202275,
+      "teacher_kappa": 0.9029391372674399,
+      "teacher_category_agreement": 0.9674,
+      "dataset_agreement": 0.8837,
+      "dataset_agreement_95ci": [
+        0.8772688013994484,
+        0.8898365182508944
+      ],
+      "dataset_macro_f1": 0.8797582712485619,
+      "dataset_kappa": 0.8789605351397236,
+      "dataset_category_agreement": 0.9436
+    },
+    {
+      "source": "jev",
+      "support_size": 2000,
+      "subset_seed": 31415,
+      "method": "centroid",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8899,
+      "teacher_agreement_95ci": [
+        0.8836146613084712,
+        0.8958858967620751
+      ],
+      "teacher_macro_f1": 0.8855343008596619,
+      "teacher_kappa": 0.8853757021662212,
+      "teacher_category_agreement": 0.9501,
+      "dataset_agreement": 0.9262,
+      "dataset_agreement_95ci": [
+        0.920910479937288,
+        0.9311621998515471
+      ],
+      "dataset_macro_f1": 0.9243901283954197,
+      "dataset_kappa": 0.9231848270173827,
+      "dataset_category_agreement": 0.9787
+    },
+    {
+      "source": "jev",
+      "support_size": 2000,
+      "subset_seed": 31415,
+      "method": "weighted_knn",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.9147,
+      "teacher_agreement_95ci": [
+        0.9090647707583752,
+        0.9200167409929856
+      ],
+      "teacher_macro_f1": 0.9119821514279925,
+      "teacher_kappa": 0.9111603576894381,
+      "teacher_category_agreement": 0.9713,
+      "dataset_agreement": 0.8939,
+      "dataset_agreement_95ci": [
+        0.8877119926330168,
+        0.8997854934505642
+      ],
+      "dataset_macro_f1": 0.8897277051589398,
+      "dataset_kappa": 0.8895732203756538,
+      "dataset_category_agreement": 0.9482
+    },
+    {
+      "source": "jev",
+      "support_size": 2000,
+      "subset_seed": 31415,
+      "method": "soft_knn",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.9146,
+      "teacher_agreement_95ci": [
+        0.9089619033511235,
+        0.9199196851999113
+      ],
+      "teacher_macro_f1": 0.9110311731487527,
+      "teacher_kappa": 0.911065130649697,
+      "teacher_category_agreement": 0.9713,
+      "dataset_agreement": 0.906,
+      "dataset_agreement_95ci": [
+        0.9001233324563265,
+        0.9115648608666842
+      ],
+      "dataset_macro_f1": 0.9005634530054598,
+      "dataset_kappa": 0.9021704953457509,
+      "dataset_category_agreement": 0.9589
+    },
+    {
+      "source": "jev",
+      "support_size": 2000,
+      "subset_seed": 31415,
+      "method": "filtered_centroid",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8898,
+      "teacher_agreement_95ci": [
+        0.8835122612488766,
+        0.8957883736213439
+      ],
+      "teacher_macro_f1": 0.8848485506169298,
+      "teacher_kappa": 0.8852631524477779,
+      "teacher_category_agreement": 0.9482,
+      "dataset_agreement": 0.9309,
+      "dataset_agreement_95ci": [
+        0.9257617947322282,
+        0.9357072754719226
+      ],
+      "dataset_macro_f1": 0.9287971903560148,
+      "dataset_kappa": 0.9280792966242639,
+      "dataset_category_agreement": 0.9824
+    },
+    {
+      "source": "jev",
+      "support_size": 2000,
+      "subset_seed": 31415,
+      "method": "hybrid",
+      "selected_on_validation": true,
+      "teacher_agreement": 0.9141,
+      "teacher_agreement_95ci": [
+        0.908447599852065,
+        0.9194343726973405
+      ],
+      "teacher_macro_f1": 0.9109219686674244,
+      "teacher_kappa": 0.9105480928702404,
+      "teacher_category_agreement": 0.969,
+      "dataset_agreement": 0.9155,
+      "dataset_agreement_95ci": [
+        0.9098877911065302,
+        0.9207931062474375
+      ],
+      "dataset_macro_f1": 0.9104917426659972,
+      "dataset_kappa": 0.912051947344741,
+      "dataset_category_agreement": 0.9649
+    },
+    {
+      "source": "jev",
+      "support_size": 2000,
+      "subset_seed": 31415,
+      "method": "majority",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.0542,
+      "teacher_agreement_95ci": [
+        0.049931145085800314,
+        0.05881122786149492
+      ],
+      "teacher_macro_f1": 0.003808399558731564,
+      "teacher_kappa": 0.0,
+      "teacher_category_agreement": 0.1138,
+      "dataset_agreement": 0.0462,
+      "dataset_agreement_95ci": [
+        0.04225704225860869,
+        0.050491474662617365
+      ],
+      "dataset_macro_f1": 0.003271097516939612,
+      "dataset_kappa": 0.0,
+      "dataset_category_agreement": 0.1006
+    },
+    {
+      "source": "jev",
+      "support_size": 2000,
+      "subset_seed": 31415,
+      "method": "prior_random",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.0377,
+      "teacher_agreement_95ci": [
+        0.034140882278196075,
+        0.04161416261533149
+      ],
+      "teacher_macro_f1": 0.036106916989172,
+      "teacher_kappa": -0.001061147702718035,
+      "teacher_category_agreement": 0.1187,
+      "dataset_agreement": 0.0374,
+      "dataset_agreement_95ci": [
+        0.033855276482213766,
+        0.04129999881033621
+      ],
+      "dataset_macro_f1": 0.036379307188839353,
+      "dataset_kappa": -0.0007139417197965514,
+      "dataset_category_agreement": 0.1188
+    },
+    {
+      "source": "dataset",
+      "support_size": 2000,
+      "subset_seed": 31415,
+      "method": "nearest",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8842,
+      "teacher_agreement_95ci": [
+        0.8777803471993272,
+        0.8903245884526448
+      ],
+      "teacher_macro_f1": 0.8788321951323288,
+      "teacher_kappa": 0.8794848846778581,
+      "teacher_category_agreement": 0.9489,
+      "dataset_agreement": 0.9598,
+      "dataset_agreement_95ci": [
+        0.955770211358904,
+        0.9634766637394218
+      ],
+      "dataset_macro_f1": 0.9580183115332778,
+      "dataset_kappa": 0.9581601990400513,
+      "dataset_category_agreement": 0.993
+    },
+    {
+      "source": "dataset",
+      "support_size": 2000,
+      "subset_seed": 31415,
+      "method": "centroid",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8836,
+      "teacher_agreement_95ci": [
+        0.8771664967014087,
+        0.8897388997486083
+      ],
+      "teacher_macro_f1": 0.8791324833127121,
+      "teacher_kappa": 0.8788722141506787,
+      "teacher_category_agreement": 0.9459,
+      "dataset_agreement": 0.9514,
+      "dataset_agreement_95ci": [
+        0.9470093917792698,
+        0.9554439344916833
+      ],
+      "dataset_macro_f1": 0.949201799109914,
+      "dataset_kappa": 0.9494152959859872,
+      "dataset_category_agreement": 0.9893
+    },
+    {
+      "source": "dataset",
+      "support_size": 2000,
+      "subset_seed": 31415,
+      "method": "weighted_knn",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8838,
+      "teacher_agreement_95ci": [
+        0.8773711075825785,
+        0.8899341352680901
+      ],
+      "teacher_macro_f1": 0.8782216081800568,
+      "teacher_kappa": 0.8790721692506752,
+      "teacher_category_agreement": 0.9495,
+      "dataset_agreement": 0.9595,
+      "dataset_agreement_95ci": [
+        0.9554566141252407,
+        0.9631904913721074
+      ],
+      "dataset_macro_f1": 0.9575752505961549,
+      "dataset_kappa": 0.9578476840112519,
+      "dataset_category_agreement": 0.9936
+    },
+    {
+      "source": "dataset",
+      "support_size": 2000,
+      "subset_seed": 31415,
+      "method": "hybrid",
+      "selected_on_validation": true,
+      "teacher_agreement": 0.889,
+      "teacher_agreement_95ci": [
+        0.8826931179776982,
+        0.8950081312899154
+      ],
+      "teacher_macro_f1": 0.8835605332871929,
+      "teacher_kappa": 0.8844867410291076,
+      "teacher_category_agreement": 0.9499,
+      "dataset_agreement": 0.966,
+      "dataset_agreement_95ci": [
+        0.9622652076103402,
+        0.9693769059081891
+      ],
+      "dataset_macro_f1": 0.9642705064099362,
+      "dataset_kappa": 0.964611977357286,
+      "dataset_category_agreement": 0.9946
+    },
+    {
+      "source": "dataset",
+      "support_size": 2000,
+      "subset_seed": 31415,
+      "method": "majority",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.0372,
+      "teacher_agreement_95ci": [
+        0.03366490829585304,
+        0.0410905205960452
+      ],
+      "teacher_macro_f1": 0.0026567253717273,
+      "teacher_kappa": 0.0,
+      "teacher_category_agreement": 0.0829,
+      "dataset_agreement": 0.0372,
+      "dataset_agreement_95ci": [
+        0.03366490829585304,
+        0.0410905205960452
+      ],
+      "dataset_macro_f1": 0.0026567253717273,
+      "dataset_kappa": 0.0,
+      "dataset_category_agreement": 0.0802
+    },
+    {
+      "source": "dataset",
+      "support_size": 2000,
+      "subset_seed": 31415,
+      "method": "prior_random",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.0393,
+      "teacher_agreement_95ci": [
+        0.03566516949826361,
+        0.043288646600477806
+      ],
+      "teacher_macro_f1": 0.03790968133312151,
+      "teacher_kappa": 0.0012890201588049433,
+      "teacher_category_agreement": 0.1188,
+      "dataset_agreement": 0.0393,
+      "dataset_agreement_95ci": [
+        0.03566516949826361,
+        0.043288646600477806
+      ],
+      "dataset_macro_f1": 0.038212866225229646,
+      "dataset_kappa": 0.001305081255167928,
+      "dataset_category_agreement": 0.1188
+    },
+    {
+      "source": "jev",
+      "support_size": 500,
+      "subset_seed": 27182,
+      "method": "nearest",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8717,
+      "teacher_agreement_95ci": [
+        0.8650023911098125,
+        0.8781121445014265
+      ],
+      "teacher_macro_f1": 0.8694111369139153,
+      "teacher_kappa": 0.8664146947250921,
+      "teacher_category_agreement": 0.9501,
+      "dataset_agreement": 0.8748,
+      "dataset_agreement_95ci": [
+        0.8681693124311033,
+        0.8811428423902375
+      ],
+      "dataset_macro_f1": 0.8709136094511934,
+      "dataset_kappa": 0.8697093284842725,
+      "dataset_category_agreement": 0.9437
+    },
+    {
+      "source": "jev",
+      "support_size": 500,
+      "subset_seed": 27182,
+      "method": "centroid",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8869,
+      "teacher_agreement_95ci": [
+        0.8805433450883315,
+        0.8929595169724389
+      ],
+      "teacher_macro_f1": 0.8820222016775721,
+      "teacher_kappa": 0.882259704236377,
+      "teacher_category_agreement": 0.9537,
+      "dataset_agreement": 0.9212,
+      "dataset_agreement_95ci": [
+        0.9157561375258092,
+        0.9263203822467327
+      ],
+      "dataset_macro_f1": 0.9169540155656679,
+      "dataset_kappa": 0.917973246328902,
+      "dataset_category_agreement": 0.9789
+    },
+    {
+      "source": "jev",
+      "support_size": 500,
+      "subset_seed": 27182,
+      "method": "weighted_knn",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8921,
+      "teacher_agreement_95ci": [
+        0.8858678696561467,
+        0.8980309988215686
+      ],
+      "teacher_macro_f1": 0.8894619739237142,
+      "teacher_kappa": 0.8876513519285583,
+      "teacher_category_agreement": 0.9599,
+      "dataset_agreement": 0.892,
+      "dataset_agreement_95ci": [
+        0.8857654340520319,
+        0.8979335112253576
+      ],
+      "dataset_macro_f1": 0.8864992570132008,
+      "dataset_kappa": 0.8875971699048916,
+      "dataset_category_agreement": 0.9534
+    },
+    {
+      "source": "jev",
+      "support_size": 500,
+      "subset_seed": 27182,
+      "method": "soft_knn",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8863,
+      "teacher_agreement_95ci": [
+        0.8799292497441491,
+        0.8923740731146661
+      ],
+      "teacher_macro_f1": 0.8822288809062245,
+      "teacher_kappa": 0.8816255430298074,
+      "teacher_category_agreement": 0.9561,
+      "dataset_agreement": 0.8996,
+      "dataset_agreement_95ci": [
+        0.8935553559860696,
+        0.9053377525160855
+      ],
+      "dataset_macro_f1": 0.892811928524209,
+      "dataset_kappa": 0.8955125284797307,
+      "dataset_category_agreement": 0.9628
+    },
+    {
+      "source": "jev",
+      "support_size": 500,
+      "subset_seed": 27182,
+      "method": "filtered_centroid",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8869,
+      "teacher_agreement_95ci": [
+        0.8805433450883315,
+        0.8929595169724389
+      ],
+      "teacher_macro_f1": 0.8820222016775721,
+      "teacher_kappa": 0.882259704236377,
+      "teacher_category_agreement": 0.9537,
+      "dataset_agreement": 0.9212,
+      "dataset_agreement_95ci": [
+        0.9157561375258092,
+        0.9263203822467327
+      ],
+      "dataset_macro_f1": 0.9169540155656679,
+      "dataset_kappa": 0.917973246328902,
+      "dataset_category_agreement": 0.9789
+    },
+    {
+      "source": "jev",
+      "support_size": 500,
+      "subset_seed": 27182,
+      "method": "hybrid",
+      "selected_on_validation": true,
+      "teacher_agreement": 0.8963,
+      "teacher_agreement_95ci": [
+        0.8901716696811628,
+        0.9021239732102388
+      ],
+      "teacher_macro_f1": 0.8928191497535501,
+      "teacher_kappa": 0.8920377316987922,
+      "teacher_category_agreement": 0.9593,
+      "dataset_agreement": 0.9172,
+      "dataset_agreement_95ci": [
+        0.9116371947411773,
+        0.9224423970183301
+      ],
+      "dataset_macro_f1": 0.9110003147072656,
+      "dataset_kappa": 0.9138171687441101,
+      "dataset_category_agreement": 0.9724
+    },
+    {
+      "source": "jev",
+      "support_size": 500,
+      "subset_seed": 27182,
+      "method": "majority",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.0305,
+      "teacher_agreement_95ci": [
+        0.027305788856246564,
+        0.03405478561381876
+      ],
+      "teacher_macro_f1": 0.0021923913238808923,
+      "teacher_kappa": 0.0,
+      "teacher_category_agreement": 0.0751,
+      "dataset_agreement": 0.0327,
+      "dataset_agreement_95ci": [
+        0.029389694497558846,
+        0.03636919037967548
+      ],
+      "dataset_macro_f1": 0.0023455236004863195,
+      "dataset_kappa": 0.0,
+      "dataset_category_agreement": 0.0745
+    },
+    {
+      "source": "jev",
+      "support_size": 500,
+      "subset_seed": 27182,
+      "method": "prior_random",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.0391,
+      "teacher_agreement_95ci": [
+        0.035474538349595804,
+        0.04307943134849388
+      ],
+      "teacher_macro_f1": 0.036379904786277124,
+      "teacher_kappa": 0.0006417670775203943,
+      "teacher_category_agreement": 0.1224,
+      "dataset_agreement": 0.0399,
+      "dataset_agreement_95ci": [
+        0.03623722186390825,
+        0.04391613343678834
+      ],
+      "dataset_macro_f1": 0.037752887013379366,
+      "dataset_kappa": 0.0019832269980989414,
+      "dataset_category_agreement": 0.1217
+    },
+    {
+      "source": "dataset",
+      "support_size": 500,
+      "subset_seed": 27182,
+      "method": "nearest",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8605,
+      "teacher_agreement_95ci": [
+        0.853570822555275,
+        0.8671523146194672
+      ],
+      "teacher_macro_f1": 0.8536655922515188,
+      "teacher_kappa": 0.8547848909331475,
+      "teacher_category_agreement": 0.9377,
+      "dataset_agreement": 0.921,
+      "dataset_agreement_95ci": [
+        0.9155500976142721,
+        0.9261265757576183
+      ],
+      "dataset_macro_f1": 0.9176817404323268,
+      "dataset_kappa": 0.9177788764878966,
+      "dataset_category_agreement": 0.9798
+    },
+    {
+      "source": "dataset",
+      "support_size": 500,
+      "subset_seed": 27182,
+      "method": "centroid",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8751,
+      "teacher_agreement_95ci": [
+        0.8684758568910595,
+        0.8814360675312587
+      ],
+      "teacher_macro_f1": 0.8691449556510553,
+      "teacher_kappa": 0.8699870401332832,
+      "teacher_category_agreement": 0.9442,
+      "dataset_agreement": 0.9301,
+      "dataset_agreement_95ci": [
+        0.924935588026703,
+        0.9349340965748412
+      ],
+      "dataset_macro_f1": 0.9269813168811288,
+      "dataset_kappa": 0.9272454989787828,
+      "dataset_category_agreement": 0.9871
+    },
+    {
+      "source": "dataset",
+      "support_size": 500,
+      "subset_seed": 27182,
+      "method": "weighted_knn",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8663,
+      "teacher_agreement_95ci": [
+        0.859488799352325,
+        0.8728298834413171
+      ],
+      "teacher_macro_f1": 0.8595643744930671,
+      "teacher_kappa": 0.8608212884759132,
+      "teacher_category_agreement": 0.939,
+      "dataset_agreement": 0.9239,
+      "dataset_agreement_95ci": [
+        0.9185386697220441,
+        0.9289357764592963
+      ],
+      "dataset_macro_f1": 0.9211409069223147,
+      "dataset_kappa": 0.920800544351076,
+      "dataset_category_agreement": 0.9815
+    },
+    {
+      "source": "dataset",
+      "support_size": 500,
+      "subset_seed": 27182,
+      "method": "hybrid",
+      "selected_on_validation": true,
+      "teacher_agreement": 0.8762,
+      "teacher_agreement_95ci": [
+        0.869599957806104,
+        0.8825111218197987
+      ],
+      "teacher_macro_f1": 0.8713594069688401,
+      "teacher_kappa": 0.8711477013707469,
+      "teacher_category_agreement": 0.9417,
+      "dataset_agreement": 0.9417,
+      "dataset_agreement_95ci": [
+        0.9369357491910962,
+        0.946125026648248
+      ],
+      "dataset_macro_f1": 0.9398394514348839,
+      "dataset_kappa": 0.9393099531260475,
+      "dataset_category_agreement": 0.9842
+    },
+    {
+      "source": "dataset",
+      "support_size": 500,
+      "subset_seed": 27182,
+      "method": "majority",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.0504,
+      "teacher_agreement_95ci": [
+        0.04628220197159746,
+        0.05486308936331493
+      ],
+      "teacher_macro_f1": 0.003554201574003554,
+      "teacher_kappa": 0.0,
+      "teacher_category_agreement": 0.2342,
+      "dataset_agreement": 0.0494,
+      "dataset_agreement_95ci": [
+        0.04532304560552551,
+        0.05382301372612823
+      ],
+      "dataset_macro_f1": 0.003487001390565332,
+      "dataset_kappa": 0.0,
+      "dataset_category_agreement": 0.2354
+    },
+    {
+      "source": "dataset",
+      "support_size": 500,
+      "subset_seed": 27182,
+      "method": "prior_random",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.0401,
+      "teacher_agreement_95ci": [
+        0.036427958323164145,
+        0.04412524337818417
+      ],
+      "teacher_macro_f1": 0.037582008114764656,
+      "teacher_kappa": 0.001913105592134423,
+      "teacher_category_agreement": 0.1243,
+      "dataset_agreement": 0.041,
+      "dataset_agreement_95ci": [
+        0.037286589733032234,
+        0.04506592077124887
+      ],
+      "dataset_macro_f1": 0.03874966522443291,
+      "dataset_kappa": 0.0032087945796677175,
+      "dataset_category_agreement": 0.1235
+    },
+    {
+      "source": "jev",
+      "support_size": 1000,
+      "subset_seed": 27182,
+      "method": "nearest",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8831,
+      "teacher_agreement_95ci": [
+        0.8766549954295874,
+        0.8892507850188002
+      ],
+      "teacher_macro_f1": 0.8787747560711128,
+      "teacher_kappa": 0.8782714622615084,
+      "teacher_category_agreement": 0.9638,
+      "dataset_agreement": 0.8793,
+      "dataset_agreement_95ci": [
+        0.8727687765377132,
+        0.8855399222982914
+      ],
+      "dataset_macro_f1": 0.8733392433453171,
+      "dataset_kappa": 0.8743825465049446,
+      "dataset_category_agreement": 0.9488
+    },
+    {
+      "source": "jev",
+      "support_size": 1000,
+      "subset_seed": 27182,
+      "method": "centroid",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8942,
+      "teacher_agreement_95ci": [
+        0.8880193989010483,
+        0.9000778567835102
+      ],
+      "teacher_macro_f1": 0.890040177978934,
+      "teacher_kappa": 0.8898596485040369,
+      "teacher_category_agreement": 0.9535,
+      "dataset_agreement": 0.9306,
+      "dataset_agreement_95ci": [
+        0.9254519449064093,
+        0.9354173556967639
+      ],
+      "dataset_macro_f1": 0.9280251517529557,
+      "dataset_kappa": 0.927759011891512,
+      "dataset_category_agreement": 0.9798
+    },
+    {
+      "source": "jev",
+      "support_size": 1000,
+      "subset_seed": 27182,
+      "method": "weighted_knn",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.9053,
+      "teacher_agreement_95ci": [
+        0.899404580110291,
+        0.9108841508104384
+      ],
+      "teacher_macro_f1": 0.9009433450134053,
+      "teacher_kappa": 0.9013626679717208,
+      "teacher_category_agreement": 0.9681,
+      "dataset_agreement": 0.9044,
+      "dataset_agreement_95ci": [
+        0.8984806101278872,
+        0.9100088119899096
+      ],
+      "dataset_macro_f1": 0.8978834204498886,
+      "dataset_kappa": 0.9004829584925766,
+      "dataset_category_agreement": 0.9611
+    },
+    {
+      "source": "jev",
+      "support_size": 1000,
+      "subset_seed": 27182,
+      "method": "soft_knn",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8932,
+      "teacher_agreement_95ci": [
+        0.8869947698701818,
+        0.899103253811118
+      ],
+      "teacher_macro_f1": 0.888058566945657,
+      "teacher_kappa": 0.8887909909456811,
+      "teacher_category_agreement": 0.9653,
+      "dataset_agreement": 0.8948,
+      "dataset_agreement_95ci": [
+        0.8886342568893476,
+        0.9006625379971661
+      ],
+      "dataset_macro_f1": 0.8878614651970348,
+      "dataset_kappa": 0.8905112751894709,
+      "dataset_category_agreement": 0.9567
+    },
+    {
+      "source": "jev",
+      "support_size": 1000,
+      "subset_seed": 27182,
+      "method": "filtered_centroid",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8891,
+      "teacher_agreement_95ci": [
+        0.8827955053425229,
+        0.8951056671254165
+      ],
+      "teacher_macro_f1": 0.8844660359338603,
+      "teacher_kappa": 0.8845376519541502,
+      "teacher_category_agreement": 0.9482,
+      "dataset_agreement": 0.9318,
+      "dataset_agreement_95ci": [
+        0.926691506687575,
+        0.9365768723195086
+      ],
+      "dataset_macro_f1": 0.9303621822193475,
+      "dataset_kappa": 0.9290121908967524,
+      "dataset_category_agreement": 0.9825
+    },
+    {
+      "source": "jev",
+      "support_size": 1000,
+      "subset_seed": 27182,
+      "method": "hybrid",
+      "selected_on_validation": true,
+      "teacher_agreement": 0.8932,
+      "teacher_agreement_95ci": [
+        0.8869947698701818,
+        0.899103253811118
+      ],
+      "teacher_macro_f1": 0.888013011599093,
+      "teacher_kappa": 0.8887972368487349,
+      "teacher_category_agreement": 0.9642,
+      "dataset_agreement": 0.9021,
+      "dataset_agreement_95ci": [
+        0.8961200570439245,
+        0.9077711314663774
+      ],
+      "dataset_macro_f1": 0.8955053694137638,
+      "dataset_kappa": 0.8981076530425913,
+      "dataset_category_agreement": 0.9631
+    },
+    {
+      "source": "jev",
+      "support_size": 1000,
+      "subset_seed": 27182,
+      "method": "majority",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.0542,
+      "teacher_agreement_95ci": [
+        0.049931145085800314,
+        0.05881122786149492
+      ],
+      "teacher_macro_f1": 0.003808399558731564,
+      "teacher_kappa": 0.0,
+      "teacher_category_agreement": 0.1138,
+      "dataset_agreement": 0.0462,
+      "dataset_agreement_95ci": [
+        0.04225704225860869,
+        0.050491474662617365
+      ],
+      "dataset_macro_f1": 0.003271097516939612,
+      "dataset_kappa": 0.0,
+      "dataset_category_agreement": 0.1006
+    },
+    {
+      "source": "jev",
+      "support_size": 1000,
+      "subset_seed": 27182,
+      "method": "prior_random",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.0353,
+      "teacher_agreement_95ci": [
+        0.03185787941401479,
+        0.03909900867169202
+      ],
+      "teacher_macro_f1": 0.034050932079873045,
+      "teacher_kappa": -0.0036509820199988052,
+      "teacher_category_agreement": 0.1205,
+      "dataset_agreement": 0.0353,
+      "dataset_agreement_95ci": [
+        0.03185787941401479,
+        0.03909900867169202
+      ],
+      "dataset_macro_f1": 0.03442940203105922,
+      "dataset_kappa": -0.0031219167154883376,
+      "dataset_category_agreement": 0.1193
+    },
+    {
+      "source": "dataset",
+      "support_size": 1000,
+      "subset_seed": 27182,
+      "method": "nearest",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.866,
+      "teacher_agreement_95ci": [
+        0.8591825966026595,
+        0.8725363165900052
+      ],
+      "teacher_macro_f1": 0.8585721094016918,
+      "teacher_kappa": 0.860540611198464,
+      "teacher_category_agreement": 0.9455,
+      "dataset_agreement": 0.9395,
+      "dataset_agreement_95ci": [
+        0.9346563151996191,
+        0.9440061502325562
+      ],
+      "dataset_macro_f1": 0.9354635076598847,
+      "dataset_kappa": 0.9370303131388854,
+      "dataset_category_agreement": 0.9884
+    },
+    {
+      "source": "dataset",
+      "support_size": 1000,
+      "subset_seed": 27182,
+      "method": "centroid",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8835,
+      "teacher_agreement_95ci": [
+        0.8770641934867991,
+        0.8896412797628919
+      ],
+      "teacher_macro_f1": 0.8788695212707803,
+      "teacher_kappa": 0.8787550737489176,
+      "teacher_category_agreement": 0.9462,
+      "dataset_agreement": 0.951,
+      "dataset_agreement_95ci": [
+        0.9465931501775137,
+        0.955060483292136
+      ],
+      "dataset_macro_f1": 0.9490391082563282,
+      "dataset_kappa": 0.9489954386204394,
+      "dataset_category_agreement": 0.9895
+    },
+    {
+      "source": "dataset",
+      "support_size": 1000,
+      "subset_seed": 27182,
+      "method": "weighted_knn",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8742,
+      "teacher_agreement_95ci": [
+        0.8675562599251186,
+        0.8805563556942669
+      ],
+      "teacher_macro_f1": 0.8670277850104219,
+      "teacher_kappa": 0.8690710059158049,
+      "teacher_category_agreement": 0.9472,
+      "dataset_agreement": 0.9439,
+      "dataset_agreement_95ci": [
+        0.9392170226934293,
+        0.9482420635530839
+      ],
+      "dataset_macro_f1": 0.9404511096864044,
+      "dataset_kappa": 0.9416112594640759,
+      "dataset_category_agreement": 0.9905
+    },
+    {
+      "source": "dataset",
+      "support_size": 1000,
+      "subset_seed": 27182,
+      "method": "hybrid",
+      "selected_on_validation": true,
+      "teacher_agreement": 0.8826,
+      "teacher_agreement_95ci": [
+        0.8761435310375107,
+        0.8887626334092475
+      ],
+      "teacher_macro_f1": 0.8771665169889509,
+      "teacher_kappa": 0.8778210968247826,
+      "teacher_category_agreement": 0.9487,
+      "dataset_agreement": 0.9555,
+      "dataset_agreement_95ci": [
+        0.9512805728663447,
+        0.9593696046179689
+      ],
+      "dataset_macro_f1": 0.9533404033020925,
+      "dataset_kappa": 0.953678196350964,
+      "dataset_category_agreement": 0.9924
+    },
+    {
+      "source": "dataset",
+      "support_size": 1000,
+      "subset_seed": 27182,
+      "method": "majority",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.0504,
+      "teacher_agreement_95ci": [
+        0.04628220197159746,
+        0.05486308936331493
+      ],
+      "teacher_macro_f1": 0.003554201574003554,
+      "teacher_kappa": 0.0,
+      "teacher_category_agreement": 0.2342,
+      "dataset_agreement": 0.0494,
+      "dataset_agreement_95ci": [
+        0.04532304560552551,
+        0.05382301372612823
+      ],
+      "dataset_macro_f1": 0.003487001390565332,
+      "dataset_kappa": 0.0,
+      "dataset_category_agreement": 0.2354
+    },
+    {
+      "source": "dataset",
+      "support_size": 1000,
+      "subset_seed": 27182,
+      "method": "prior_random",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.037,
+      "teacher_agreement_95ci": [
+        0.03347456890925213,
+        0.04088101358199439
+      ],
+      "teacher_macro_f1": 0.035932301222289915,
+      "teacher_kappa": -0.0013474622247129364,
+      "teacher_category_agreement": 0.1196,
+      "dataset_agreement": 0.0364,
+      "dataset_agreement_95ci": [
+        0.03290372580498077,
+        0.04025231748431056
+      ],
+      "dataset_macro_f1": 0.03531282516929989,
+      "dataset_kappa": -0.0019036585412515183,
+      "dataset_category_agreement": 0.1187
+    },
+    {
+      "source": "jev",
+      "support_size": 2000,
+      "subset_seed": 27182,
+      "method": "nearest",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.9068,
+      "teacher_agreement_95ci": [
+        0.9009448818594445,
+        0.912342697066173
+      ],
+      "teacher_macro_f1": 0.9045811722202275,
+      "teacher_kappa": 0.9029391372674399,
+      "teacher_category_agreement": 0.9674,
+      "dataset_agreement": 0.8837,
+      "dataset_agreement_95ci": [
+        0.8772688013994484,
+        0.8898365182508944
+      ],
+      "dataset_macro_f1": 0.8797582712485619,
+      "dataset_kappa": 0.8789605351397236,
+      "dataset_category_agreement": 0.9436
+    },
+    {
+      "source": "jev",
+      "support_size": 2000,
+      "subset_seed": 27182,
+      "method": "centroid",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8899,
+      "teacher_agreement_95ci": [
+        0.8836146613084712,
+        0.8958858967620751
+      ],
+      "teacher_macro_f1": 0.8855343008596619,
+      "teacher_kappa": 0.8853757021662212,
+      "teacher_category_agreement": 0.9501,
+      "dataset_agreement": 0.9262,
+      "dataset_agreement_95ci": [
+        0.920910479937288,
+        0.9311621998515471
+      ],
+      "dataset_macro_f1": 0.9243901283954197,
+      "dataset_kappa": 0.9231848270173827,
+      "dataset_category_agreement": 0.9787
+    },
+    {
+      "source": "jev",
+      "support_size": 2000,
+      "subset_seed": 27182,
+      "method": "weighted_knn",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.9147,
+      "teacher_agreement_95ci": [
+        0.9090647707583752,
+        0.9200167409929856
+      ],
+      "teacher_macro_f1": 0.9119821514279925,
+      "teacher_kappa": 0.9111603576894381,
+      "teacher_category_agreement": 0.9713,
+      "dataset_agreement": 0.8939,
+      "dataset_agreement_95ci": [
+        0.8877119926330168,
+        0.8997854934505642
+      ],
+      "dataset_macro_f1": 0.8897277051589398,
+      "dataset_kappa": 0.8895732203756538,
+      "dataset_category_agreement": 0.9482
+    },
+    {
+      "source": "jev",
+      "support_size": 2000,
+      "subset_seed": 27182,
+      "method": "soft_knn",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.9146,
+      "teacher_agreement_95ci": [
+        0.9089619033511235,
+        0.9199196851999113
+      ],
+      "teacher_macro_f1": 0.9110311731487527,
+      "teacher_kappa": 0.911065130649697,
+      "teacher_category_agreement": 0.9713,
+      "dataset_agreement": 0.906,
+      "dataset_agreement_95ci": [
+        0.9001233324563265,
+        0.9115648608666842
+      ],
+      "dataset_macro_f1": 0.9005634530054598,
+      "dataset_kappa": 0.9021704953457509,
+      "dataset_category_agreement": 0.9589
+    },
+    {
+      "source": "jev",
+      "support_size": 2000,
+      "subset_seed": 27182,
+      "method": "filtered_centroid",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8898,
+      "teacher_agreement_95ci": [
+        0.8835122612488766,
+        0.8957883736213439
+      ],
+      "teacher_macro_f1": 0.8848485506169298,
+      "teacher_kappa": 0.8852631524477779,
+      "teacher_category_agreement": 0.9482,
+      "dataset_agreement": 0.9309,
+      "dataset_agreement_95ci": [
+        0.9257617947322282,
+        0.9357072754719226
+      ],
+      "dataset_macro_f1": 0.9287971903560148,
+      "dataset_kappa": 0.9280792966242639,
+      "dataset_category_agreement": 0.9824
+    },
+    {
+      "source": "jev",
+      "support_size": 2000,
+      "subset_seed": 27182,
+      "method": "hybrid",
+      "selected_on_validation": true,
+      "teacher_agreement": 0.9141,
+      "teacher_agreement_95ci": [
+        0.908447599852065,
+        0.9194343726973405
+      ],
+      "teacher_macro_f1": 0.9109219686674244,
+      "teacher_kappa": 0.9105480928702404,
+      "teacher_category_agreement": 0.969,
+      "dataset_agreement": 0.9155,
+      "dataset_agreement_95ci": [
+        0.9098877911065302,
+        0.9207931062474375
+      ],
+      "dataset_macro_f1": 0.9104917426659972,
+      "dataset_kappa": 0.912051947344741,
+      "dataset_category_agreement": 0.9649
+    },
+    {
+      "source": "jev",
+      "support_size": 2000,
+      "subset_seed": 27182,
+      "method": "majority",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.0542,
+      "teacher_agreement_95ci": [
+        0.049931145085800314,
+        0.05881122786149492
+      ],
+      "teacher_macro_f1": 0.003808399558731564,
+      "teacher_kappa": 0.0,
+      "teacher_category_agreement": 0.1138,
+      "dataset_agreement": 0.0462,
+      "dataset_agreement_95ci": [
+        0.04225704225860869,
+        0.050491474662617365
+      ],
+      "dataset_macro_f1": 0.003271097516939612,
+      "dataset_kappa": 0.0,
+      "dataset_category_agreement": 0.1006
+    },
+    {
+      "source": "jev",
+      "support_size": 2000,
+      "subset_seed": 27182,
+      "method": "prior_random",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.0388,
+      "teacher_agreement_95ci": [
+        0.035188641958211225,
+        0.04276555813890086
+      ],
+      "teacher_macro_f1": 0.03730530931936617,
+      "teacher_kappa": 0.00019830648446617083,
+      "teacher_category_agreement": 0.1198,
+      "dataset_agreement": 0.0382,
+      "dataset_agreement_95ci": [
+        0.03461703284432172,
+        0.04213762805083516
+      ],
+      "dataset_macro_f1": 0.03688116459156937,
+      "dataset_kappa": 0.00020760920803597482,
+      "dataset_category_agreement": 0.1177
+    },
+    {
+      "source": "dataset",
+      "support_size": 2000,
+      "subset_seed": 27182,
+      "method": "nearest",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8842,
+      "teacher_agreement_95ci": [
+        0.8777803471993272,
+        0.8903245884526448
+      ],
+      "teacher_macro_f1": 0.8788321951323288,
+      "teacher_kappa": 0.8794848846778581,
+      "teacher_category_agreement": 0.9489,
+      "dataset_agreement": 0.9598,
+      "dataset_agreement_95ci": [
+        0.955770211358904,
+        0.9634766637394218
+      ],
+      "dataset_macro_f1": 0.9580183115332778,
+      "dataset_kappa": 0.9581601990400513,
+      "dataset_category_agreement": 0.993
+    },
+    {
+      "source": "dataset",
+      "support_size": 2000,
+      "subset_seed": 27182,
+      "method": "centroid",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8836,
+      "teacher_agreement_95ci": [
+        0.8771664967014087,
+        0.8897388997486083
+      ],
+      "teacher_macro_f1": 0.8791324833127121,
+      "teacher_kappa": 0.8788722141506787,
+      "teacher_category_agreement": 0.9459,
+      "dataset_agreement": 0.9514,
+      "dataset_agreement_95ci": [
+        0.9470093917792698,
+        0.9554439344916833
+      ],
+      "dataset_macro_f1": 0.949201799109914,
+      "dataset_kappa": 0.9494152959859872,
+      "dataset_category_agreement": 0.9893
+    },
+    {
+      "source": "dataset",
+      "support_size": 2000,
+      "subset_seed": 27182,
+      "method": "weighted_knn",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.8838,
+      "teacher_agreement_95ci": [
+        0.8773711075825785,
+        0.8899341352680901
+      ],
+      "teacher_macro_f1": 0.8782216081800568,
+      "teacher_kappa": 0.8790721692506752,
+      "teacher_category_agreement": 0.9495,
+      "dataset_agreement": 0.9595,
+      "dataset_agreement_95ci": [
+        0.9554566141252407,
+        0.9631904913721074
+      ],
+      "dataset_macro_f1": 0.9575752505961549,
+      "dataset_kappa": 0.9578476840112519,
+      "dataset_category_agreement": 0.9936
+    },
+    {
+      "source": "dataset",
+      "support_size": 2000,
+      "subset_seed": 27182,
+      "method": "hybrid",
+      "selected_on_validation": true,
+      "teacher_agreement": 0.889,
+      "teacher_agreement_95ci": [
+        0.8826931179776982,
+        0.8950081312899154
+      ],
+      "teacher_macro_f1": 0.8835605332871929,
+      "teacher_kappa": 0.8844867410291076,
+      "teacher_category_agreement": 0.9499,
+      "dataset_agreement": 0.966,
+      "dataset_agreement_95ci": [
+        0.9622652076103402,
+        0.9693769059081891
+      ],
+      "dataset_macro_f1": 0.9642705064099362,
+      "dataset_kappa": 0.964611977357286,
+      "dataset_category_agreement": 0.9946
+    },
+    {
+      "source": "dataset",
+      "support_size": 2000,
+      "subset_seed": 27182,
+      "method": "majority",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.0372,
+      "teacher_agreement_95ci": [
+        0.03366490829585304,
+        0.0410905205960452
+      ],
+      "teacher_macro_f1": 0.0026567253717273,
+      "teacher_kappa": 0.0,
+      "teacher_category_agreement": 0.0829,
+      "dataset_agreement": 0.0372,
+      "dataset_agreement_95ci": [
+        0.03366490829585304,
+        0.0410905205960452
+      ],
+      "dataset_macro_f1": 0.0026567253717273,
+      "dataset_kappa": 0.0,
+      "dataset_category_agreement": 0.0802
+    },
+    {
+      "source": "dataset",
+      "support_size": 2000,
+      "subset_seed": 27182,
+      "method": "prior_random",
+      "selected_on_validation": false,
+      "teacher_agreement": 0.0372,
+      "teacher_agreement_95ci": [
+        0.03366490829585304,
+        0.0410905205960452
+      ],
+      "teacher_macro_f1": 0.03608918246253993,
+      "teacher_kappa": -0.0007950437236627916,
+      "teacher_category_agreement": 0.114,
+      "dataset_agreement": 0.0363,
+      "dataset_agreement_95ci": [
+        0.032808611118288936,
+        0.040147508970676524
+      ],
+      "dataset_macro_f1": 0.03515427280578091,
+      "dataset_kappa": -0.001708267564936694,
+      "dataset_category_agreement": 0.1124
+    }
+  ],
+  "subset_summary": [
+    {
+      "source": "jev",
+      "support_size": 500,
+      "method": "nearest",
+      "subset_runs": 5,
+      "teacher_agreement_mean": 0.86044,
+      "dataset_agreement_mean": 0.8489000000000001,
+      "teacher_agreement_std": 0.008733155214468586,
+      "dataset_agreement_std": 0.015906288064787465
+    },
+    {
+      "source": "jev",
+      "support_size": 500,
+      "method": "centroid",
+      "subset_runs": 5,
+      "teacher_agreement_mean": 0.88562,
+      "dataset_agreement_mean": 0.9020999999999999,
+      "teacher_agreement_std": 0.007617545536457273,
+      "dataset_agreement_std": 0.01258312361856151
+    },
+    {
+      "source": "jev",
+      "support_size": 500,
+      "method": "weighted_knn",
+      "subset_runs": 5,
+      "teacher_agreement_mean": 0.8797200000000001,
+      "dataset_agreement_mean": 0.8716800000000001,
+      "teacher_agreement_std": 0.011610426348760847,
+      "dataset_agreement_std": 0.01664983483401562
+    },
+    {
+      "source": "jev",
+      "support_size": 500,
+      "method": "soft_knn",
+      "subset_runs": 5,
+      "teacher_agreement_mean": 0.8817,
+      "dataset_agreement_mean": 0.882,
+      "teacher_agreement_std": 0.007094716343871698,
+      "dataset_agreement_std": 0.01777695136968088
+    },
+    {
+      "source": "jev",
+      "support_size": 500,
+      "method": "filtered_centroid",
+      "subset_runs": 5,
+      "teacher_agreement_mean": 0.8842399999999999,
+      "dataset_agreement_mean": 0.91318,
+      "teacher_agreement_std": 0.005609634569203278,
+      "dataset_agreement_std": 0.005695348979649991
+    },
+    {
+      "source": "jev",
+      "support_size": 500,
+      "method": "hybrid",
+      "subset_runs": 5,
+      "teacher_agreement_mean": 0.8923400000000001,
+      "dataset_agreement_mean": 0.9056200000000001,
+      "teacher_agreement_std": 0.004690735549996408,
+      "dataset_agreement_std": 0.010904907152286999
+    },
+    {
+      "source": "jev",
+      "support_size": 500,
+      "method": "majority",
+      "subset_runs": 5,
+      "teacher_agreement_mean": 0.033,
+      "dataset_agreement_mean": 0.035460000000000005,
+      "teacher_agreement_std": 0.0027919527216627425,
+      "dataset_agreement_std": 0.003140541354607514
+    },
+    {
+      "source": "jev",
+      "support_size": 500,
+      "method": "prior_random",
+      "subset_runs": 5,
+      "teacher_agreement_mean": 0.0382,
+      "dataset_agreement_mean": 0.038459999999999994,
+      "teacher_agreement_std": 0.0012041594578792306,
+      "dataset_agreement_std": 0.001425833089811005
+    },
+    {
+      "source": "dataset",
+      "support_size": 500,
+      "method": "nearest",
+      "subset_runs": 5,
+      "teacher_agreement_mean": 0.8482199999999999,
+      "dataset_agreement_mean": 0.9135199999999999,
+      "teacher_agreement_std": 0.007822851142646166,
+      "dataset_agreement_std": 0.005977206705477075
+    },
+    {
+      "source": "dataset",
+      "support_size": 500,
+      "method": "centroid",
+      "subset_runs": 5,
+      "teacher_agreement_mean": 0.8746799999999999,
+      "dataset_agreement_mean": 0.9395200000000001,
+      "teacher_agreement_std": 0.0031083757816583106,
+      "dataset_agreement_std": 0.007199444423009305
+    },
+    {
+      "source": "dataset",
+      "support_size": 500,
+      "method": "weighted_knn",
+      "subset_runs": 5,
+      "teacher_agreement_mean": 0.8560599999999999,
+      "dataset_agreement_mean": 0.9233800000000001,
+      "teacher_agreement_std": 0.009924867757305398,
+      "dataset_agreement_std": 0.008233286099729564
+    },
+    {
+      "source": "dataset",
+      "support_size": 500,
+      "method": "hybrid",
+      "subset_runs": 5,
+      "teacher_agreement_mean": 0.87644,
+      "dataset_agreement_mean": 0.94442,
+      "teacher_agreement_std": 0.0038559045631343476,
+      "dataset_agreement_std": 0.005959614081465339
+    },
+    {
+      "source": "dataset",
+      "support_size": 500,
+      "method": "majority",
+      "subset_runs": 5,
+      "teacher_agreement_mean": 0.03648,
+      "dataset_agreement_mean": 0.037739999999999996,
+      "teacher_agreement_std": 0.008282330589876258,
+      "dataset_agreement_std": 0.006710663156499512
+    },
+    {
+      "source": "dataset",
+      "support_size": 500,
+      "method": "prior_random",
+      "subset_runs": 5,
+      "teacher_agreement_mean": 0.03776,
+      "dataset_agreement_mean": 0.039040000000000005,
+      "teacher_agreement_std": 0.0014758048651498598,
+      "dataset_agreement_std": 0.0011523888232710363
+    },
+    {
+      "source": "jev",
+      "support_size": 1000,
+      "method": "nearest",
+      "subset_runs": 5,
+      "teacher_agreement_mean": 0.88696,
+      "dataset_agreement_mean": 0.87294,
+      "teacher_agreement_std": 0.0029821133445930475,
+      "dataset_agreement_std": 0.004926763643610279
+    },
+    {
+      "source": "jev",
+      "support_size": 1000,
+      "method": "centroid",
+      "subset_runs": 5,
+      "teacher_agreement_mean": 0.8915200000000001,
+      "dataset_agreement_mean": 0.92264,
+      "teacher_agreement_std": 0.0026583829671437435,
+      "dataset_agreement_std": 0.005488897885732622
+    },
+    {
+      "source": "jev",
+      "support_size": 1000,
+      "method": "weighted_knn",
+      "subset_runs": 5,
+      "teacher_agreement_mean": 0.9021399999999999,
+      "dataset_agreement_mean": 0.88932,
+      "teacher_agreement_std": 0.0026005768590833807,
+      "dataset_agreement_std": 0.009056875841039232
+    },
+    {
+      "source": "jev",
+      "support_size": 1000,
+      "method": "soft_knn",
+      "subset_runs": 5,
+      "teacher_agreement_mean": 0.89984,
+      "dataset_agreement_mean": 0.8932200000000001,
+      "teacher_agreement_std": 0.005831209137048691,
+      "dataset_agreement_std": 0.006558734634058622
+    },
+    {
+      "source": "jev",
+      "support_size": 1000,
+      "method": "filtered_centroid",
+      "subset_runs": 5,
+      "teacher_agreement_mean": 0.8903000000000001,
+      "dataset_agreement_mean": 0.9257799999999999,
+      "teacher_agreement_std": 0.0029266021253323833,
+      "dataset_agreement_std": 0.004476829235072513
+    },
+    {
+      "source": "jev",
+      "support_size": 1000,
+      "method": "hybrid",
+      "subset_runs": 5,
+      "teacher_agreement_mean": 0.90384,
+      "dataset_agreement_mean": 0.9118600000000001,
+      "teacher_agreement_std": 0.007285121824650566,
+      "dataset_agreement_std": 0.007037613231771112
+    },
+    {
+      "source": "jev",
+      "support_size": 1000,
+      "method": "majority",
+      "subset_runs": 5,
+      "teacher_agreement_mean": 0.05249999999999999,
+      "dataset_agreement_mean": 0.045559999999999996,
+      "teacher_agreement_std": 0.0038013155617496425,
+      "dataset_agreement_std": 0.001431083505599866
+    },
+    {
+      "source": "jev",
+      "support_size": 1000,
+      "method": "prior_random",
+      "subset_runs": 5,
+      "teacher_agreement_mean": 0.03818,
+      "dataset_agreement_mean": 0.03782,
+      "teacher_agreement_std": 0.002190205469813278,
+      "dataset_agreement_std": 0.001785217073635585
+    },
+    {
+      "source": "dataset",
+      "support_size": 1000,
+      "method": "nearest",
+      "subset_runs": 5,
+      "teacher_agreement_mean": 0.86886,
+      "dataset_agreement_mean": 0.9415000000000001,
+      "teacher_agreement_std": 0.0029390474647409356,
+      "dataset_agreement_std": 0.0036789944278294404
+    },
+    {
+      "source": "dataset",
+      "support_size": 1000,
+      "method": "centroid",
+      "subset_runs": 5,
+      "teacher_agreement_mean": 0.88186,
+      "dataset_agreement_mean": 0.94992,
+      "teacher_agreement_std": 0.0021372880011828127,
+      "dataset_agreement_std": 0.002391024884855861
+    },
+    {
+      "source": "dataset",
+      "support_size": 1000,
+      "method": "weighted_knn",
+      "subset_runs": 5,
+      "teacher_agreement_mean": 0.87554,
+      "dataset_agreement_mean": 0.94634,
+      "teacher_agreement_std": 0.00393420894208732,
+      "dataset_agreement_std": 0.005092445385077807
+    },
+    {
+      "source": "dataset",
+      "support_size": 1000,
+      "method": "hybrid",
+      "subset_runs": 5,
+      "teacher_agreement_mean": 0.8818000000000001,
+      "dataset_agreement_mean": 0.9537000000000001,
+      "teacher_agreement_std": 0.005128352561983231,
+      "dataset_agreement_std": 0.0037033768374282483
+    },
+    {
+      "source": "dataset",
+      "support_size": 1000,
+      "method": "majority",
+      "subset_runs": 5,
+      "teacher_agreement_mean": 0.039959999999999996,
+      "dataset_agreement_mean": 0.03984,
+      "teacher_agreement_std": 0.010320998013758166,
+      "dataset_agreement_std": 0.01054291231112163
+    },
+    {
+      "source": "dataset",
+      "support_size": 1000,
+      "method": "prior_random",
+      "subset_runs": 5,
+      "teacher_agreement_mean": 0.03812,
+      "dataset_agreement_mean": 0.03812,
+      "teacher_agreement_std": 0.0015254507530562912,
+      "dataset_agreement_std": 0.0014805404418657396
+    },
+    {
+      "source": "jev",
+      "support_size": 2000,
+      "method": "nearest",
+      "subset_runs": 5,
+      "teacher_agreement_mean": 0.9068000000000002,
+      "dataset_agreement_mean": 0.8836999999999999,
+      "teacher_agreement_std": 1.2412670766236366e-16,
+      "dataset_agreement_std": 1.2412670766236366e-16
+    },
+    {
+      "source": "jev",
+      "support_size": 2000,
+      "method": "centroid",
+      "subset_runs": 5,
+      "teacher_agreement_mean": 0.8899000000000001,
+      "dataset_agreement_mean": 0.9262,
+      "teacher_agreement_std": 1.2412670766236366e-16,
+      "dataset_agreement_std": 0.0
+    },
+    {
+      "source": "jev",
+      "support_size": 2000,
+      "method": "weighted_knn",
+      "subset_runs": 5,
+      "teacher_agreement_mean": 0.9147000000000001,
+      "dataset_agreement_mean": 0.8939,
+      "teacher_agreement_std": 1.2412670766236366e-16,
+      "dataset_agreement_std": 0.0
+    },
+    {
+      "source": "jev",
+      "support_size": 2000,
+      "method": "soft_knn",
+      "subset_runs": 5,
+      "teacher_agreement_mean": 0.9145999999999999,
+      "dataset_agreement_mean": 0.906,
+      "teacher_agreement_std": 1.2412670766236366e-16,
+      "dataset_agreement_std": 0.0
+    },
+    {
+      "source": "jev",
+      "support_size": 2000,
+      "method": "filtered_centroid",
+      "subset_runs": 5,
+      "teacher_agreement_mean": 0.8897999999999999,
+      "dataset_agreement_mean": 0.9309,
+      "teacher_agreement_std": 1.2412670766236366e-16,
+      "dataset_agreement_std": 0.0
+    },
+    {
+      "source": "jev",
+      "support_size": 2000,
+      "method": "hybrid",
+      "subset_runs": 5,
+      "teacher_agreement_mean": 0.9141,
+      "dataset_agreement_mean": 0.9155,
+      "teacher_agreement_std": 0.0,
+      "dataset_agreement_std": 0.0
+    },
+    {
+      "source": "jev",
+      "support_size": 2000,
+      "method": "majority",
+      "subset_runs": 5,
+      "teacher_agreement_mean": 0.054200000000000005,
+      "dataset_agreement_mean": 0.0462,
+      "teacher_agreement_std": 7.757919228897728e-18,
+      "dataset_agreement_std": 0.0
+    },
+    {
+      "source": "jev",
+      "support_size": 2000,
+      "method": "prior_random",
+      "subset_runs": 5,
+      "teacher_agreement_mean": 0.038,
+      "dataset_agreement_mean": 0.0372,
+      "teacher_agreement_std": 0.0006519202405202647,
+      "dataset_agreement_std": 0.0007314369419163891
+    },
+    {
+      "source": "dataset",
+      "support_size": 2000,
+      "method": "nearest",
+      "subset_runs": 5,
+      "teacher_agreement_mean": 0.8842000000000001,
+      "dataset_agreement_mean": 0.9597999999999999,
+      "teacher_agreement_std": 1.2412670766236366e-16,
+      "dataset_agreement_std": 1.2412670766236366e-16
+    },
+    {
+      "source": "dataset",
+      "support_size": 2000,
+      "method": "centroid",
+      "subset_runs": 5,
+      "teacher_agreement_mean": 0.8836,
+      "dataset_agreement_mean": 0.9513999999999999,
+      "teacher_agreement_std": 0.0,
+      "dataset_agreement_std": 1.2412670766236366e-16
+    },
+    {
+      "source": "dataset",
+      "support_size": 2000,
+      "method": "weighted_knn",
+      "subset_runs": 5,
+      "teacher_agreement_mean": 0.8838000000000001,
+      "dataset_agreement_mean": 0.9595,
+      "teacher_agreement_std": 1.2412670766236366e-16,
+      "dataset_agreement_std": 0.0
+    },
+    {
+      "source": "dataset",
+      "support_size": 2000,
+      "method": "hybrid",
+      "subset_runs": 5,
+      "teacher_agreement_mean": 0.889,
+      "dataset_agreement_mean": 0.966,
+      "teacher_agreement_std": 0.0,
+      "dataset_agreement_std": 0.0
+    },
+    {
+      "source": "dataset",
+      "support_size": 2000,
+      "method": "majority",
+      "subset_runs": 5,
+      "teacher_agreement_mean": 0.0372,
+      "dataset_agreement_mean": 0.0372,
+      "teacher_agreement_std": 0.0,
+      "dataset_agreement_std": 0.0
+    },
+    {
+      "source": "dataset",
+      "support_size": 2000,
+      "method": "prior_random",
+      "subset_runs": 5,
+      "teacher_agreement_mean": 0.037419999999999995,
+      "dataset_agreement_mean": 0.03746,
+      "teacher_agreement_std": 0.0016392071254115507,
+      "dataset_agreement_std": 0.0012856904759700144
+    }
+  ],
+  "paired_comparisons": [
+    {
+      "source": "jev",
+      "size": 500,
+      "comparison": "selected_vs_centroid",
+      "accuracy_difference": 0.0048,
+      "difference_95ci": [
+        0.0016,
+        0.0081
+      ],
+      "candidate_only_correct": 164,
+      "baseline_only_correct": 116,
+      "mcnemar_exact_p": 0.004883738258482777,
+      "paired_bootstrap_resamples": 10000,
+      "seed": 20261008,
+      "holm_adjusted_p": 0.014651214775448331
+    },
+    {
+      "source": "jev",
+      "size": 1000,
+      "comparison": "selected_vs_centroid",
+      "accuracy_difference": 0.0103,
+      "difference_95ci": [
+        0.0061,
+        0.0144
+      ],
+      "candidate_only_correct": 279,
+      "baseline_only_correct": 176,
+      "mcnemar_exact_p": 1.576069116199917e-06,
+      "paired_bootstrap_resamples": 10000,
+      "seed": 20261008,
+      "holm_adjusted_p": 6.304276464799668e-06
+    },
+    {
+      "source": "jev",
+      "size": 2000,
+      "comparison": "selected_vs_centroid",
+      "accuracy_difference": 0.0242,
+      "difference_95ci": [
+        0.0194,
+        0.0289
+      ],
+      "candidate_only_correct": 415,
+      "baseline_only_correct": 173,
+      "mcnemar_exact_p": 6.402867564650586e-24,
+      "paired_bootstrap_resamples": 10000,
+      "seed": 20261008,
+      "holm_adjusted_p": 3.841720538790352e-23
+    },
+    {
+      "source": "dataset",
+      "size": 500,
+      "comparison": "selected_vs_centroid",
+      "accuracy_difference": 0.0,
+      "difference_95ci": [
+        0.0,
+        0.0
+      ],
+      "candidate_only_correct": 0,
+      "baseline_only_correct": 0,
+      "mcnemar_exact_p": 1.0,
+      "paired_bootstrap_resamples": 10000,
+      "seed": 20261008,
+      "holm_adjusted_p": 1
+    },
+    {
+      "source": "dataset",
+      "size": 1000,
+      "comparison": "selected_vs_centroid",
+      "accuracy_difference": -0.0013,
+      "difference_95ci": [
+        -0.0048,
+        0.0022
+      ],
+      "candidate_only_correct": 152,
+      "baseline_only_correct": 165,
+      "mcnemar_exact_p": 0.5003814794445238,
+      "paired_bootstrap_resamples": 10000,
+      "seed": 20261008,
+      "holm_adjusted_p": 1
+    },
+    {
+      "source": "dataset",
+      "size": 2000,
+      "comparison": "selected_vs_centroid",
+      "accuracy_difference": 0.0146,
+      "difference_95ci": [
+        0.0109,
+        0.0183
+      ],
+      "candidate_only_correct": 249,
+      "baseline_only_correct": 103,
+      "mcnemar_exact_p": 4.392485752311279e-15,
+      "paired_bootstrap_resamples": 10000,
+      "seed": 20261008,
+      "holm_adjusted_p": 2.1962428761556397e-14
+    }
+  ],
+  "uniform_random_expected_agreement": 0.037037037037037035,
+  "uniform_random_100_runs_teacher_agreement_mean": 0.037104,
+  "uniform_random_100_runs_teacher_agreement_std": 0.002015591749588716
+}

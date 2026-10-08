@@ -1,0 +1,20 @@
+{
+  "intent": "payment_issue",
+  "method": "centroid",
+  "score": 0.7357367277145386,
+  "score_type": "cosine_similarity",
+  "margin": 0.014924824237823486,
+  "calibrated_probability": false,
+  "api_calls": 0,
+  "cache_vector_bytes": 82944,
+  "runs": 20,
+  "warm_end_to_end_ms_p50": 12.578040499647614,
+  "warm_end_to_end_ms_p95": 13.060207098169485,
+  "search_ms_p50": 0.01566349237691611,
+  "gpu": "NVIDIA RTX 4070",
+  "input_characters": 73,
+  "timing_excludes": [
+    "model loading",
+    "warm-up"
+  ]
+}

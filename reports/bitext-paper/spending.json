@@ -1,0 +1,10 @@
+{
+  "attempts": 15000,
+  "successful_calls": 15000,
+  "input_tokens": 15785361,
+  "successful_usage_estimated_usd": 0.662985162,
+  "conservative_spend_including_unknown_usd": 0.662985162,
+  "cap_usd": 4.0,
+  "price_per_million_input_tokens_usd": 0.042,
+  "pricing_verified_on": "2026-10-08"
+}
